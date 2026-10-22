@@ -79,4 +79,6 @@ CMakeLists.txt.user*
 .pch/
 .rcc/
 .uic/
-/build*/
+/build/Desktop*
+/build/*Debug*
+!/build/WebAssembly_Qt_6_8_3_single_threaded-Release/

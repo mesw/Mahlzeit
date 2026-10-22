@@ -1,0 +1,1932 @@
+[
+  {
+    "id": "milchreis-mit-pfirsich-und-honig",
+    "dish_name": "Milchreis mit Pfirsich und Honig",
+    "category": "Frühstück & Breie",
+    "servings": 1,
+    "ingredients": {
+      "Magermilch": 225,
+      "Reis": 30,
+      "Pfirsich": 125,
+      "Honig": 5,
+      "Wasser": 200,
+      "Salz": 0.25,
+      "Zimt": 4
+    },
+    "ingredient_details": [
+      {
+        "name": "Magermilch",
+        "amount": 225,
+        "unit": "ml"
+      },
+      {
+        "name": "Reis",
+        "amount": 30,
+        "unit": "g"
+      },
+      {
+        "name": "Pfirsich",
+        "amount": 125,
+        "unit": "g"
+      },
+      {
+        "name": "Honig",
+        "amount": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "Salz",
+        "amount": 0.25,
+        "unit": "g"
+      },
+      {
+        "name": "Zimt",
+        "amount": 4,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "hirsebrei",
+    "dish_name": "Hirsebrei",
+    "category": "Frühstück & Breie",
+    "servings": 2,
+    "ingredients": {
+      "Hirse": 100,
+      "Wasser": 400,
+      "Dattel": 30,
+      "Haselnuss": 5,
+      "Honig": 15,
+      "Apfel": 120,
+      "Zimt": 8,
+      "Zitronensaft": 8,
+      "Ingwer": 8
+    },
+    "ingredient_details": [
+      {
+        "name": "Hirse",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 400,
+        "unit": "ml"
+      },
+      {
+        "name": "Dattel",
+        "amount": 30,
+        "unit": "g"
+      },
+      {
+        "name": "Haselnuss",
+        "amount": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Honig",
+        "amount": 15,
+        "unit": "g"
+      },
+      {
+        "name": "Apfel",
+        "amount": 120,
+        "unit": "g"
+      },
+      {
+        "name": "Zimt",
+        "amount": 8,
+        "unit": "g"
+      },
+      {
+        "name": "Zitronensaft",
+        "amount": 8,
+        "unit": "ml"
+      },
+      {
+        "name": "Ingwer",
+        "amount": 8,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "apfelmuesli",
+    "dish_name": "Apfelmüsli",
+    "category": "Frühstück & Breie",
+    "servings": 1,
+    "ingredients": {
+      "Apfel": 120,
+      "Müsli": 40,
+      "Joghurt": 250,
+      "Wasser": 200,
+      "Haselnuss": 10,
+      "Sonnenblumenkern": 10,
+      "Rosine": 10,
+      "Honig": 5
+    },
+    "ingredient_details": [
+      {
+        "name": "Apfel",
+        "amount": 120,
+        "unit": "g"
+      },
+      {
+        "name": "Müsli",
+        "amount": 40,
+        "unit": "g"
+      },
+      {
+        "name": "Joghurt",
+        "amount": 250,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "Haselnuss",
+        "amount": 10,
+        "unit": "g"
+      },
+      {
+        "name": "Sonnenblumenkern",
+        "amount": 10,
+        "unit": "g"
+      },
+      {
+        "name": "Rosine",
+        "amount": 10,
+        "unit": "g"
+      },
+      {
+        "name": "Honig",
+        "amount": 5,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "himbeer-apfel-muesli",
+    "dish_name": "Himbeer-Apfel-Müsli",
+    "category": "Frühstück & Breie",
+    "servings": 1,
+    "ingredients": {
+      "Haferflocken": 40,
+      "Wasser": 200,
+      "Himbeere": 100,
+      "Apfelmus": 40,
+      "Joghurt": 270,
+      "Zitronensaft": 4,
+      "Honig": 4
+    },
+    "ingredient_details": [
+      {
+        "name": "Haferflocken",
+        "amount": 40,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "Himbeere",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "Apfelmus",
+        "amount": 40,
+        "unit": "g"
+      },
+      {
+        "name": "Joghurt",
+        "amount": 270,
+        "unit": "g"
+      },
+      {
+        "name": "Zitronensaft",
+        "amount": 4,
+        "unit": "ml"
+      },
+      {
+        "name": "Honig",
+        "amount": 4,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "klassisches-fruehstueck",
+    "dish_name": "Klassisches Frühstück",
+    "category": "Frühstück & Breie",
+    "servings": 1,
+    "ingredients": {
+      "Weizenvollkornbrot": 130,
+      "Gouda": 50,
+      "Butter": 10,
+      "Honig": 10,
+      "Orangensaft": 125,
+      "Tee": 200,
+      "Wasser": 200,
+      "Zucker": 5
+    },
+    "ingredient_details": [
+      {
+        "name": "Weizenvollkornbrot",
+        "amount": 130,
+        "unit": "g"
+      },
+      {
+        "name": "Gouda",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "Butter",
+        "amount": 10,
+        "unit": "g"
+      },
+      {
+        "name": "Honig",
+        "amount": 10,
+        "unit": "g"
+      },
+      {
+        "name": "Orangensaft",
+        "amount": 125,
+        "unit": "ml"
+      },
+      {
+        "name": "Tee",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "Zucker",
+        "amount": 5,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "bananen-himbeer-shake",
+    "dish_name": "Bananen-Himbeer Shake",
+    "category": "Shakes",
+    "servings": 2,
+    "ingredients": {
+      "Joghurt": 180,
+      "Banane": 120,
+      "Himbeere": 100,
+      "Magermilch": 180,
+      "Haferflocken": 30,
+      "Wasser": 400
+    },
+    "ingredient_details": [
+      {
+        "name": "Joghurt",
+        "amount": 180,
+        "unit": "g"
+      },
+      {
+        "name": "Banane",
+        "amount": 120,
+        "unit": "g"
+      },
+      {
+        "name": "Himbeere",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "Magermilch",
+        "amount": 180,
+        "unit": "ml"
+      },
+      {
+        "name": "Haferflocken",
+        "amount": 30,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 400,
+        "unit": "ml"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "bananen-shake",
+    "dish_name": "Bananen-Shake",
+    "category": "Shakes",
+    "servings": 2,
+    "ingredients": {
+      "Magermilch": 250,
+      "Banane": 120,
+      "Haferflocken": 40,
+      "Wasser": 400,
+      "Honig": 15
+    },
+    "ingredient_details": [
+      {
+        "name": "Magermilch",
+        "amount": 250,
+        "unit": "ml"
+      },
+      {
+        "name": "Banane",
+        "amount": 120,
+        "unit": "g"
+      },
+      {
+        "name": "Haferflocken",
+        "amount": 40,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 400,
+        "unit": "ml"
+      },
+      {
+        "name": "Honig",
+        "amount": 15,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "schoko-shake",
+    "dish_name": "Schoko Shake",
+    "category": "Shakes",
+    "servings": 1,
+    "ingredients": {
+      "Magermilch": 250,
+      "Haferflocken": 60,
+      "Kakaopulver": 20,
+      "Wasser": 200,
+      "Zucker": 8
+    },
+    "ingredient_details": [
+      {
+        "name": "Magermilch",
+        "amount": 250,
+        "unit": "ml"
+      },
+      {
+        "name": "Haferflocken",
+        "amount": 60,
+        "unit": "g"
+      },
+      {
+        "name": "Kakaopulver",
+        "amount": 20,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "Zucker",
+        "amount": 8,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "birnen-jogurt-shake",
+    "dish_name": "Birnen-Jogurt Shake",
+    "category": "Shakes",
+    "servings": 1,
+    "ingredients": {
+      "Joghurt": 180,
+      "Birnensaft": 100,
+      "Haferflocken": 70,
+      "Wasser": 200,
+      "Honig": 15,
+      "Zimt": 4
+    },
+    "ingredient_details": [
+      {
+        "name": "Joghurt",
+        "amount": 180,
+        "unit": "g"
+      },
+      {
+        "name": "Birnensaft",
+        "amount": 100,
+        "unit": "ml"
+      },
+      {
+        "name": "Haferflocken",
+        "amount": 70,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "Honig",
+        "amount": 15,
+        "unit": "g"
+      },
+      {
+        "name": "Zimt",
+        "amount": 4,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "tunfischaufstrich",
+    "dish_name": "Tunfischaufstrich",
+    "category": "Aufstriche & Salate",
+    "servings": 10,
+    "ingredients": {
+      "Thunfisch, roh": 150,
+      "Frischkäse, Doppelrahm": 250,
+      "Gurke": 40,
+      "Schnittlauch, roh": 10,
+      "Wasser": 2000,
+      "Rapsöl": 5,
+      "Senf": 5,
+      "Salz": 2.5,
+      "Pfeffer": 40
+    },
+    "ingredient_details": [
+      {
+        "name": "Thunfisch, roh",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "name": "Frischkäse, Doppelrahm",
+        "amount": 250,
+        "unit": "g"
+      },
+      {
+        "name": "Gurke",
+        "amount": 40,
+        "unit": "g"
+      },
+      {
+        "name": "Schnittlauch, roh",
+        "amount": 10,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 2000,
+        "unit": "ml"
+      },
+      {
+        "name": "Rapsöl",
+        "amount": 5,
+        "unit": "ml"
+      },
+      {
+        "name": "Senf",
+        "amount": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Salz",
+        "amount": 2.5,
+        "unit": "g"
+      },
+      {
+        "name": "Pfeffer",
+        "amount": 40,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "schinkenaufstrich",
+    "dish_name": "Schinkenaufstrich",
+    "category": "Aufstriche & Salate",
+    "servings": 10,
+    "ingredients": {
+      "Hüttenkäse, nature": 250,
+      "Hinterschinken": 100,
+      "Ei": 100,
+      "Gurke": 40,
+      "Wasser": 2000,
+      "Paprika": 40
+    },
+    "ingredient_details": [
+      {
+        "name": "Hüttenkäse, nature",
+        "amount": 250,
+        "unit": "g"
+      },
+      {
+        "name": "Hinterschinken",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "Ei",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "Gurke",
+        "amount": 40,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 2000,
+        "unit": "ml"
+      },
+      {
+        "name": "Paprika",
+        "amount": 40,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "dilltopfen",
+    "dish_name": "Dilltopfen",
+    "category": "Aufstriche & Salate",
+    "servings": 5,
+    "ingredients": {
+      "Hüttenkäse, nature": 250,
+      "Dill": 15,
+      "Wasser": 1000,
+      "Rapsöl": 10,
+      "Salz": 1.25
+    },
+    "ingredient_details": [
+      {
+        "name": "Hüttenkäse, nature",
+        "amount": 250,
+        "unit": "g"
+      },
+      {
+        "name": "Dill",
+        "amount": 15,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 1000,
+        "unit": "ml"
+      },
+      {
+        "name": "Rapsöl",
+        "amount": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Salz",
+        "amount": 1.25,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "kartoffelkaese",
+    "dish_name": "Kartoffelkäse",
+    "category": "Aufstriche & Salate",
+    "servings": 4,
+    "ingredients": {
+      "Kartoffel": 350,
+      "Sauerrahm": 300,
+      "Joghurt": 300,
+      "Zwiebel": 80,
+      "Paprika": 40,
+      "Wasser": 800,
+      "Salz": 1.0
+    },
+    "ingredient_details": [
+      {
+        "name": "Kartoffel",
+        "amount": 350,
+        "unit": "g"
+      },
+      {
+        "name": "Sauerrahm",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "name": "Joghurt",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "name": "Zwiebel",
+        "amount": 80,
+        "unit": "g"
+      },
+      {
+        "name": "Paprika",
+        "amount": 40,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 800,
+        "unit": "ml"
+      },
+      {
+        "name": "Salz",
+        "amount": 1.0,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "tunfischsalat",
+    "dish_name": "Tunfischsalat",
+    "category": "Aufstriche & Salate",
+    "servings": 1,
+    "ingredients": {
+      "Thunfisch, roh": 150,
+      "Radicchio, raw": 50,
+      "Gurke": 50,
+      "Paprika": 200,
+      "Zwiebel": 120,
+      "Tomate": 120,
+      "Oliven": 15,
+      "Wasser": 200,
+      "Rapsöl": 10,
+      "Essig": 4,
+      "Senf": 4,
+      "Knoblauch": 4,
+      "Pfeffer": 4,
+      "Salz": 0.25
+    },
+    "ingredient_details": [
+      {
+        "name": "Thunfisch, roh",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "name": "Radicchio, raw",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "Gurke",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "Paprika",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "Zwiebel",
+        "amount": 120,
+        "unit": "g"
+      },
+      {
+        "name": "Tomate",
+        "amount": 120,
+        "unit": "g"
+      },
+      {
+        "name": "Oliven",
+        "amount": 15,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "Rapsöl",
+        "amount": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Essig",
+        "amount": 4,
+        "unit": "ml"
+      },
+      {
+        "name": "Senf",
+        "amount": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Knoblauch",
+        "amount": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Pfeffer",
+        "amount": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Salz",
+        "amount": 0.25,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "hering-apfel-salat",
+    "dish_name": "Hering-Apfel-Salat",
+    "category": "Aufstriche & Salate",
+    "servings": 2,
+    "ingredients": {
+      "Atlantic herring": 150,
+      "Apfel": 100,
+      "Gurke": 50,
+      "Hüttenkäse, nature": 50,
+      "Buttermilch": 70,
+      "Zwiebel": 25,
+      "Wasser": 400,
+      "Dill": 8,
+      "Salz": 0.5,
+      "Pfeffer": 8,
+      "Essig": 8,
+      "Worcestershire sauce": 8
+    },
+    "ingredient_details": [
+      {
+        "name": "Atlantic herring",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "name": "Apfel",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "Gurke",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "Hüttenkäse, nature",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "Buttermilch",
+        "amount": 70,
+        "unit": "ml"
+      },
+      {
+        "name": "Zwiebel",
+        "amount": 25,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 400,
+        "unit": "ml"
+      },
+      {
+        "name": "Dill",
+        "amount": 8,
+        "unit": "g"
+      },
+      {
+        "name": "Salz",
+        "amount": 0.5,
+        "unit": "g"
+      },
+      {
+        "name": "Pfeffer",
+        "amount": 8,
+        "unit": "g"
+      },
+      {
+        "name": "Essig",
+        "amount": 8,
+        "unit": "ml"
+      },
+      {
+        "name": "Worcestershire sauce",
+        "amount": 8,
+        "unit": "ml"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "karottencremesuppe",
+    "dish_name": "Karottencremesuppe",
+    "category": "Suppen & Nudelgerichte",
+    "servings": 1,
+    "ingredients": {
+      "Karotte": 100,
+      "Gemüsebouillon": 200,
+      "Wasser": 200,
+      "Vollmilch, UHT": 60,
+      "Joghurt": 15,
+      "Petersilie": 4,
+      "Salz": 0.25
+    },
+    "ingredient_details": [
+      {
+        "name": "Karotte",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "Gemüsebouillon",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "Wasser",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "Vollmilch, UHT",
+        "amount": 60,
+        "unit": "ml"
+      },
+      {
+        "name": "Joghurt",
+        "amount": 15,
+        "unit": "g"
+      },
+      {
+        "name": "Petersilie",
+        "amount": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Salz",
+        "amount": 0.25,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "zucchinicremesuppe",
+    "dish_name": "Zucchinicremesuppe",
+    "category": "Suppen & Nudelgerichte",
+    "servings": 1,
+    "ingredients": {
+      "Green zucchini": 180,
+      "Kartoffel": 80,
+      "Zwiebel": 120,
+      "Knoblauch": 3,
+      "Wasser": 350,
+      "Rapsöl": 5,
+      "Essig": 5,
+      "Dill": 4,
+      "Salz": 0.25,
+      "Pfeffer": 4
+    },
+    "ingredient_details": [
+      {
+        "name": "Green zucchini",
+        "amount": 180,
+        "unit": "g"
+      },
+      {
+        "name": "Kartoffel",
+        "amount": 80,
+        "unit": "g"
+      },
+      {
+        "name": "Zwiebel",
+        "amount": 120,
+        "unit": "g"
+      },
+      {
+        "name": "Knoblauch",
+        "amount": 3,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 350,
+        "unit": "ml"
+      },
+      {
+        "name": "Rapsöl",
+        "amount": 5,
+        "unit": "ml"
+      },
+      {
+        "name": "Essig",
+        "amount": 5,
+        "unit": "ml"
+      },
+      {
+        "name": "Dill",
+        "amount": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Salz",
+        "amount": 0.25,
+        "unit": "g"
+      },
+      {
+        "name": "Pfeffer",
+        "amount": 4,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "gemueseauflauf-mit-penne",
+    "dish_name": "Gemüseauflauf mit Penne",
+    "category": "Suppen & Nudelgerichte",
+    "servings": 4,
+    "ingredients": {
+      "Teigwaren": 300,
+      "Green zucchini": 200,
+      "Karotte": 200,
+      "Spargel": 200,
+      "Paprika": 120,
+      "Sonnenblumenöl": 30,
+      "Butter": 30,
+      "Mehl": 25,
+      "Milch": 450,
+      "Wasser": 800,
+      "Parmesan Cheese": 30,
+      "Salz": 1.0,
+      "Pfeffer": 16
+    },
+    "ingredient_details": [
+      {
+        "name": "Teigwaren",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "name": "Green zucchini",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "Karotte",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "Spargel",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "Paprika",
+        "amount": 120,
+        "unit": "g"
+      },
+      {
+        "name": "Sonnenblumenöl",
+        "amount": 30,
+        "unit": "ml"
+      },
+      {
+        "name": "Butter",
+        "amount": 30,
+        "unit": "g"
+      },
+      {
+        "name": "Mehl",
+        "amount": 25,
+        "unit": "g"
+      },
+      {
+        "name": "Milch",
+        "amount": 450,
+        "unit": "ml"
+      },
+      {
+        "name": "Wasser",
+        "amount": 800,
+        "unit": "ml"
+      },
+      {
+        "name": "Parmesan Cheese",
+        "amount": 30,
+        "unit": "g"
+      },
+      {
+        "name": "Salz",
+        "amount": 1.0,
+        "unit": "g"
+      },
+      {
+        "name": "Pfeffer",
+        "amount": 16,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "spaghetti-mit-tomatensosse",
+    "dish_name": "Spaghetti mit Tomatensoße",
+    "category": "Suppen & Nudelgerichte",
+    "servings": 1,
+    "ingredients": {
+      "Teigwaren": 120,
+      "Tomate": 200,
+      "Wasser": 200,
+      "Parmesan Cheese": 20,
+      "Olivenöl": 5,
+      "Basil": 4,
+      "Salz": 0.25
+    },
+    "ingredient_details": [
+      {
+        "name": "Teigwaren",
+        "amount": 120,
+        "unit": "g"
+      },
+      {
+        "name": "Tomate",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "Parmesan Cheese",
+        "amount": 20,
+        "unit": "g"
+      },
+      {
+        "name": "Olivenöl",
+        "amount": 5,
+        "unit": "ml"
+      },
+      {
+        "name": "Basil",
+        "amount": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Salz",
+        "amount": 0.25,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "makkaroni-mit-ricottasosse",
+    "dish_name": "Makkaroni mit Ricottasoße",
+    "category": "Suppen & Nudelgerichte",
+    "servings": 2,
+    "ingredients": {
+      "Macaroni": 400,
+      "Ricotta Cheese": 250,
+      "Wasser": 400,
+      "Pesto, red": 15
+    },
+    "ingredient_details": [
+      {
+        "name": "Macaroni",
+        "amount": 400,
+        "unit": "g"
+      },
+      {
+        "name": "Ricotta Cheese",
+        "amount": 250,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 400,
+        "unit": "ml"
+      },
+      {
+        "name": "Pesto, red",
+        "amount": 15,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "gemuese-lasagne",
+    "dish_name": "Gemüse-Lasagne",
+    "category": "Suppen & Nudelgerichte",
+    "servings": 2,
+    "ingredients": {
+      "Teigwaren": 40,
+      "Spinat": 40,
+      "Aubergine": 40,
+      "Tomate": 60,
+      "Hüttenkäse, nature": 40,
+      "Schmelzkäse": 20,
+      "Tomatensauce": 180,
+      "Magermilch": 100,
+      "Wasser": 400,
+      "Dinkelmehl, Vollkorn": 5,
+      "Margarine": 5,
+      "Parmesan Cheese": 5,
+      "Salz": 0.5,
+      "Pfeffer": 8
+    },
+    "ingredient_details": [
+      {
+        "name": "Teigwaren",
+        "amount": 40,
+        "unit": "g"
+      },
+      {
+        "name": "Spinat",
+        "amount": 40,
+        "unit": "g"
+      },
+      {
+        "name": "Aubergine",
+        "amount": 40,
+        "unit": "g"
+      },
+      {
+        "name": "Tomate",
+        "amount": 60,
+        "unit": "g"
+      },
+      {
+        "name": "Hüttenkäse, nature",
+        "amount": 40,
+        "unit": "g"
+      },
+      {
+        "name": "Schmelzkäse",
+        "amount": 20,
+        "unit": "g"
+      },
+      {
+        "name": "Tomatensauce",
+        "amount": 180,
+        "unit": "ml"
+      },
+      {
+        "name": "Magermilch",
+        "amount": 100,
+        "unit": "ml"
+      },
+      {
+        "name": "Wasser",
+        "amount": 400,
+        "unit": "ml"
+      },
+      {
+        "name": "Dinkelmehl, Vollkorn",
+        "amount": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Margarine",
+        "amount": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Parmesan Cheese",
+        "amount": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Salz",
+        "amount": 0.5,
+        "unit": "g"
+      },
+      {
+        "name": "Pfeffer",
+        "amount": 8,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "tortilla-wrap-mit-putenfleisch-und-kaese",
+    "dish_name": "Tortilla Wrap mit Putenfleisch und Käse",
+    "category": "Hauptgerichte",
+    "servings": 1,
+    "ingredients": {
+      "Tortilla": 80,
+      "Turkey": 100,
+      "Gouda": 60,
+      "Zwiebel": 25,
+      "Paprika": 120,
+      "Tomatenpüree": 15,
+      "Wasser": 200,
+      "Olivenöl": 7,
+      "Chili": 3
+    },
+    "ingredient_details": [
+      {
+        "name": "Tortilla",
+        "amount": 80,
+        "unit": "g"
+      },
+      {
+        "name": "Turkey",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "Gouda",
+        "amount": 60,
+        "unit": "g"
+      },
+      {
+        "name": "Zwiebel",
+        "amount": 25,
+        "unit": "g"
+      },
+      {
+        "name": "Paprika",
+        "amount": 120,
+        "unit": "g"
+      },
+      {
+        "name": "Tomatenpüree",
+        "amount": 15,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "Olivenöl",
+        "amount": 7,
+        "unit": "ml"
+      },
+      {
+        "name": "Chili",
+        "amount": 3,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "asiatische-huehnerbrust",
+    "dish_name": "Asiatische Hühnerbrust",
+    "category": "Hauptgerichte",
+    "servings": 1,
+    "ingredients": {
+      "Chicken": 120,
+      "Basmati Rice": 50,
+      "Paprika": 50,
+      "Bamboo shoot": 50,
+      "Erbse": 50,
+      "Sojasprossen, roh": 50,
+      "Wasser": 200,
+      "Sojasauce": 20,
+      "Rapsöl": 10,
+      "Curry Leaf": 4
+    },
+    "ingredient_details": [
+      {
+        "name": "Chicken",
+        "amount": 120,
+        "unit": "g"
+      },
+      {
+        "name": "Basmati Rice",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "Paprika",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "Bamboo shoot",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "Erbse",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "Sojasprossen, roh",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "Sojasauce",
+        "amount": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Rapsöl",
+        "amount": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Curry Leaf",
+        "amount": 4,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "couscous-mit-gemuese",
+    "dish_name": "Couscous mit Gemüse",
+    "category": "Hauptgerichte",
+    "servings": 1,
+    "ingredients": {
+      "Couscous": 100,
+      "Aubergine": 250,
+      "Tomate": 300,
+      "Wasser": 200,
+      "Zitronensaft": 20,
+      "Petersilie": 4,
+      "Rosemary": 4,
+      "Salz": 0.25
+    },
+    "ingredient_details": [
+      {
+        "name": "Couscous",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "Aubergine",
+        "amount": 250,
+        "unit": "g"
+      },
+      {
+        "name": "Tomate",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "Zitronensaft",
+        "amount": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Petersilie",
+        "amount": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Rosemary",
+        "amount": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Salz",
+        "amount": 0.25,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "vegetarisches-chili",
+    "dish_name": "Vegetarisches Chili",
+    "category": "Hauptgerichte",
+    "servings": 1,
+    "ingredients": {
+      "Lentils": 100,
+      "Kidney Beans": 100,
+      "Mais": 50,
+      "Green zucchini": 100,
+      "Tomate": 100,
+      "Paprika": 180,
+      "Zwiebel": 60,
+      "Wasser": 200,
+      "Tomatenpüree": 15,
+      "Rapsöl": 10,
+      "Knoblauch": 4,
+      "Sojasauce": 4,
+      "Chili": 4,
+      "Salz": 0.25
+    },
+    "ingredient_details": [
+      {
+        "name": "Lentils",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "Kidney Beans",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "Mais",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "Green zucchini",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "Tomate",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "Paprika",
+        "amount": 180,
+        "unit": "g"
+      },
+      {
+        "name": "Zwiebel",
+        "amount": 60,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "Tomatenpüree",
+        "amount": 15,
+        "unit": "g"
+      },
+      {
+        "name": "Rapsöl",
+        "amount": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Knoblauch",
+        "amount": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Sojasauce",
+        "amount": 4,
+        "unit": "ml"
+      },
+      {
+        "name": "Chili",
+        "amount": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Salz",
+        "amount": 0.25,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "reis-mit-pilzen",
+    "dish_name": "Reis mit Pilzen",
+    "category": "Hauptgerichte",
+    "servings": 4,
+    "ingredients": {
+      "Brown Rice": 250,
+      "Pilz": 300,
+      "Petersilie": 25,
+      "Zwiebel": 100,
+      "Wasser": 800,
+      "Sonnenblumenöl": 10,
+      "Salz": 1.0
+    },
+    "ingredient_details": [
+      {
+        "name": "Brown Rice",
+        "amount": 250,
+        "unit": "g"
+      },
+      {
+        "name": "Pilz",
+        "amount": 300,
+        "unit": "g"
+      },
+      {
+        "name": "Petersilie",
+        "amount": 25,
+        "unit": "g"
+      },
+      {
+        "name": "Zwiebel",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 800,
+        "unit": "ml"
+      },
+      {
+        "name": "Sonnenblumenöl",
+        "amount": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Salz",
+        "amount": 1.0,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "erdaepfelpfanne",
+    "dish_name": "Erdäpfelpfanne",
+    "category": "Hauptgerichte",
+    "servings": 1,
+    "ingredients": {
+      "Kartoffel": 200,
+      "Paprika": 100,
+      "Lauch, roh": 40,
+      "Feta Cheese": 20,
+      "Mozzarella": 20,
+      "Wasser": 200,
+      "Sonnenblumenöl": 10,
+      "Thymian": 4,
+      "Pfeffer": 4,
+      "Salz": 0.25
+    },
+    "ingredient_details": [
+      {
+        "name": "Kartoffel",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "Paprika",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "Lauch, roh",
+        "amount": 40,
+        "unit": "g"
+      },
+      {
+        "name": "Feta Cheese",
+        "amount": 20,
+        "unit": "g"
+      },
+      {
+        "name": "Mozzarella",
+        "amount": 20,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "Sonnenblumenöl",
+        "amount": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Thymian",
+        "amount": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Pfeffer",
+        "amount": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Salz",
+        "amount": 0.25,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "ueberbackenes-fischfilet",
+    "dish_name": "Überbackenes Fischfilet",
+    "category": "Hauptgerichte",
+    "servings": 1,
+    "ingredients": {
+      "Dorsch, roh": 240,
+      "Karotte": 60,
+      "Green zucchini": 120,
+      "Sauerrahm": 15,
+      "Gouda": 15,
+      "Wasser": 200,
+      "Zitronensaft": 4,
+      "Petersilie": 4,
+      "Salz": 0.25
+    },
+    "ingredient_details": [
+      {
+        "name": "Dorsch, roh",
+        "amount": 240,
+        "unit": "g"
+      },
+      {
+        "name": "Karotte",
+        "amount": 60,
+        "unit": "g"
+      },
+      {
+        "name": "Green zucchini",
+        "amount": 120,
+        "unit": "g"
+      },
+      {
+        "name": "Sauerrahm",
+        "amount": 15,
+        "unit": "g"
+      },
+      {
+        "name": "Gouda",
+        "amount": 15,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "Zitronensaft",
+        "amount": 4,
+        "unit": "ml"
+      },
+      {
+        "name": "Petersilie",
+        "amount": 4,
+        "unit": "g"
+      },
+      {
+        "name": "Salz",
+        "amount": 0.25,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "dorsch-mit-brokkoli",
+    "dish_name": "Dorsch mit Brokkoli",
+    "category": "Hauptgerichte",
+    "servings": 1,
+    "ingredients": {
+      "Dorsch, roh": 100,
+      "Broccoli": 200,
+      "Wasser": 200,
+      "Rapsöl": 10,
+      "Zitronensaft": 4,
+      "Salz": 0.25
+    },
+    "ingredient_details": [
+      {
+        "name": "Dorsch, roh",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "Broccoli",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 200,
+        "unit": "ml"
+      },
+      {
+        "name": "Rapsöl",
+        "amount": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Zitronensaft",
+        "amount": 4,
+        "unit": "ml"
+      },
+      {
+        "name": "Salz",
+        "amount": 0.25,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "pfirsich-topfencreme",
+    "dish_name": "Pfirsich-Topfencreme",
+    "category": "Süßspeisen",
+    "servings": 1,
+    "ingredients": {
+      "Hüttenkäse, nature": 250,
+      "Orangensaft": 100,
+      "Pfirsich": 130,
+      "Wasser": 200
+    },
+    "ingredient_details": [
+      {
+        "name": "Hüttenkäse, nature",
+        "amount": 250,
+        "unit": "g"
+      },
+      {
+        "name": "Orangensaft",
+        "amount": 100,
+        "unit": "ml"
+      },
+      {
+        "name": "Pfirsich",
+        "amount": 130,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 200,
+        "unit": "ml"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "apfelnockerln-mit-nuessen",
+    "dish_name": "Apfelnockerln mit Nüssen",
+    "category": "Süßspeisen",
+    "servings": 2,
+    "ingredients": {
+      "Dinkelmehl, Vollkorn": 125,
+      "Wasser": 400,
+      "Ei": 50,
+      "Apfel": 240,
+      "Haselnuss": 20,
+      "Rapsöl": 10,
+      "Rosine": 15,
+      "Honig": 8,
+      "Zimt": 8,
+      "Salz": 0.5
+    },
+    "ingredient_details": [
+      {
+        "name": "Dinkelmehl, Vollkorn",
+        "amount": 125,
+        "unit": "g"
+      },
+      {
+        "name": "Wasser",
+        "amount": 400,
+        "unit": "ml"
+      },
+      {
+        "name": "Ei",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "Apfel",
+        "amount": 240,
+        "unit": "g"
+      },
+      {
+        "name": "Haselnuss",
+        "amount": 20,
+        "unit": "g"
+      },
+      {
+        "name": "Rapsöl",
+        "amount": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Rosine",
+        "amount": 15,
+        "unit": "g"
+      },
+      {
+        "name": "Honig",
+        "amount": 8,
+        "unit": "g"
+      },
+      {
+        "name": "Zimt",
+        "amount": 8,
+        "unit": "g"
+      },
+      {
+        "name": "Salz",
+        "amount": 0.5,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  },
+  {
+    "id": "kaiserschmarrn",
+    "dish_name": "Kaiserschmarrn",
+    "category": "Süßspeisen",
+    "servings": 2,
+    "ingredients": {
+      "Ei": 200,
+      "Dinkelmehl, Vollkorn": 65,
+      "Mehl": 60,
+      "Milch": 250,
+      "Wasser": 400,
+      "Zucker": 50,
+      "Salz": 0.5
+    },
+    "ingredient_details": [
+      {
+        "name": "Ei",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "Dinkelmehl, Vollkorn",
+        "amount": 65,
+        "unit": "g"
+      },
+      {
+        "name": "Mehl",
+        "amount": 60,
+        "unit": "g"
+      },
+      {
+        "name": "Milch",
+        "amount": 250,
+        "unit": "ml"
+      },
+      {
+        "name": "Wasser",
+        "amount": 400,
+        "unit": "ml"
+      },
+      {
+        "name": "Zucker",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "Salz",
+        "amount": 0.5,
+        "unit": "g"
+      }
+    ],
+    "instructions": ""
+  }
+]

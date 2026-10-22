@@ -1,0 +1,559 @@
+A qt quick application written in modern c++20 using qt 6.8.3 compiled to webassembly (single-thread) and hosted on GitHub Pages. 
+
+For now this is a Web-App, with focus on Mobile, but also compiled for Desktop for testing during development. This application will also be included in an Android app, later.
+
+All computation and storage of user data is done locally, no online-only and no phoning-home or such behavior. We avoid collecting any user data, the user is responsible for their own data. We do not collect any user data. The user can save the Settings and pantry which is done in the browser or on Desktop via QSettings.
+if the user decides to connect their pantry with another user's pantry, this is possible via Cloudflare durable objects. The user has to create his own instance of a Cloudflare durable object according to the instructions we provide and set the Connection Details in the Settings screen, to allow sharing a pantry/Shopping list.
+
+The application contains of the following screens:
+- the pantry (what the user has. it is the list of all ingredients from all recipies and the user can select if the ingredient is available)
+- the Shopping list (what the user does not have. this is the list of all ingredients that are not in the pantry. the shopping list can be sorted and filtered by ingredients that are used in starred recipies)
+- the recipies (this is the list of all recipies. a recipie has a title and a list of ingredients with amounts.) sortable and filterable by the suggestion System. by Default Shows only recipies for which all ingredients are available and that are suitable for the current time of day. the user can star recipies.
+- the Settings (here the user can edit the categories of the recipes and the preferred time Slots for the categories)
+- the selected recipie (this is the screen that Shows the full recipy including all ingredients, amounts. it allows changing serving size and the application displays the the recalculated amounts of ingredients for that serving size. Here the formatted preparation instructions are shown from the markdown preparation instructions, which are not provided yet.)
+
+Other modules of the application:
+- the suggestion System (this checks which recipies can be made with the available ingredients from the pantry. This module also take into Account the preferred time for meals (e.g. breakfast 04:00-08:00, morning Snack 09:00-12:00, lunch 11:00-14:00, afternoon Snack 13:00-16:00, evening Snack 15:00-19:00, dinner 17:00-21:00, etc.). the suggestion System is used in the recipies screen for sorting and filtering the recipies.
+- the recipie Collection (we might add the possibility to add or Change recipies in the future, or allow connecting to a global recipy Cloudflare durable object which allows adding recipies from the global Collection to the private offline Collection of recipies)
+
+Recipies do not have instructions for preparation, yet. We might add this in the future, for now this is empty. I would like to allow markdown Format for the preparation instructions which can be rendered in qt quick text/labels Pretty nicely.
+The recipies shall be added as a json file to the repository. The json is also included as a resource in the application, and imported on first run to the user Settings. On user request, the recipies list can be refreshed from the website mesw.github.io/Malzeit/res/recipies.json. This allows making changes to the Default recipies later without recompiling the webassembly.
+
+the desired repository structure:
+source/ # all the code files
+resources/ # recipie json and any images
+build/ # this is the build Folder from qt creator. there is the webassembly build Folder inside, from which we will deploy the relevant files directly. if there is a better way than storing These build artifacts in for deployment on GitHub pages in the git source tree, then let me know!
+index.html # the GitHub pages index. this contains a short info page about the project including a link to the repo, the 3 sentence privacy policy and a "agree and launch" button that Forwards to the build/WebAssembly_Qt_6_8_3_single_threaded-Release/index.html
+README.md # a Brief project description
+# the Android project will use this repo as submodule
+
+
+The project has been created. The CMakeLists.txt is just the Default which was created by Qt Creator.
+
+Do not try to build the application, the user will  build the application via Qt Creator. If Tests are necessary, create unit Tests, the user will provide Output of failing tests.
+
+
+Here is the recipie list:
+
+````
+
+# =============================================================================
+# RECIPE DEFINITIONS (32 RECIPES)
+# =============================================================================
+
+RECIPES = [
+    # -------------------------------------------------------------------------
+    # 1. FRÜHSTÜCK & BREIE (BREAKFAST & PORRIDGES)
+    # -------------------------------------------------------------------------
+    {
+        "category": "Frühstück & Breie",
+        "dish_name": "Milchreis mit Pfirsich und Honig",
+        "servings": 1,
+        "ingredients": {
+            "Magermilch": 225,        # 225 ml Magermilch
+            "Reis": 30,               # 30 g Rundkornreis
+            "Pfirsich": 125,          # 125 g Pfirsichkompottobst
+            "Honig": 5,               # 1 TL Honig
+            "Wasser": 200,            # 200 ml Wasser
+            "Salz": 0.25,             # Prise Salz (0.25g / Portion)
+            "Zimt": 4                 # Optional: Zimt (4g / Portion)
+        }
+    },
+    {
+        "category": "Frühstück & Breie",
+        "dish_name": "Hirsebrei",
+        "servings": 2,
+        "ingredients": {
+            "Hirse": 100,             # 100 g Hirse
+            "Wasser": 400,            # 400 ml Wasser (200 ml / Portion)
+            "Dattel": 30,             # ca. 4 Stück klein geschnittene Trockenfrüchte
+            "Haselnuss": 5,           # 1 TL gehackte Nüsse
+            "Honig": 15,              # 1 EL Honig
+            "Apfel": 120,             # 1 geriebener frischer Apfel
+            "Zimt": 8,                # Optional: Zimt (4g / Portion)
+            "Zitronensaft": 8,        # Optional: etwas Zitronensaft (4g / Portion)
+            "Ingwer": 8               # Optional: frisch geriebener Ingwer (4g / Portion)
+        }
+    },
+    {
+        "category": "Frühstück & Breie",
+        "dish_name": "Apfelmüsli",
+        "servings": 1,
+        "ingredients": {
+            "Apfel": 120,             # 1 Apfel
+            "Müsli": 40,              # 4 EL Müsli
+            "Joghurt": 250,           # 1/4 l Jogurt
+            "Wasser": 200,            # 200 ml Wasser
+            "Haselnuss": 10,          # 1 EL Haselnüsse
+            "Sonnenblumenkern": 10,   # 1 EL Sonnenblumenkerne
+            "Rosine": 10,             # 2 TL Rosinen
+            "Honig": 5                # 1 TL Honig
+        }
+    },
+    {
+        "category": "Frühstück & Breie",
+        "dish_name": "Himbeer-Apfel-Müsli",
+        "servings": 1,
+        "ingredients": {
+            "Haferflocken": 40,       # 4 EL Haferflocken
+            "Wasser": 200,            # 200 ml Wasser zum Einweichen & Trinken
+            "Himbeere": 100,          # 100 g Himbeeren
+            "Apfelmus": 40,           # 2 EL Apfelmus (oder 1 geriebener Apfel)
+            "Joghurt": 270,           # 1½ Becher Jogurt (~270g)
+            "Zitronensaft": 4,        # Etwas Zitronensaft (4g / Portion)
+            "Honig": 4                # Optional: Honig (4g / Portion)
+        }
+    },
+    {
+        "category": "Frühstück & Breie",
+        "dish_name": "Klassisches Frühstück",
+        "servings": 1,
+        "ingredients": {
+            "Weizenvollkornbrot": 130, # 2 Vollkornweckerl (ca. 130g)
+            "Gouda": 50,               # 2 Scheiben magerer Schnittkäse (<35% F.i.Tr.)
+            "Butter": 10,              # 10 g Butter
+            "Honig": 10,               # 10 g Honig
+            "Orangensaft": 125,        # 1/8 l Orangensaft
+            "Tee": 200,                # Früchtetee
+            "Wasser": 200,             # 200 ml Wasser
+            "Zucker": 5                # 1 TL Zucker
+        }
+    },
+
+    # -------------------------------------------------------------------------
+    # 2. SHAKES
+    # -------------------------------------------------------------------------
+    {
+        "category": "Shakes",
+        "dish_name": "Bananen-Himbeer Shake",
+        "servings": 2,
+        "ingredients": {
+            "Joghurt": 180,           # 1 kl. Becher (180 g) Vanillejogurt (max. 1% Fett)
+            "Banane": 120,            # 1 Banane
+            "Himbeere": 100,          # 100 g Himbeeren (frisch oder tiefgekühlt)
+            "Magermilch": 180,        # 1 kl. Tasse (180 ml) Magermilch (max. 1% Fett)
+            "Haferflocken": 30,       # 3 EL Haferflocken (oder Hafermark)
+            "Wasser": 400             # 400 ml Wasser (200 ml / Portion)
+        }
+    },
+    {
+        "category": "Shakes",
+        "dish_name": "Bananen-Shake",
+        "servings": 2,
+        "ingredients": {
+            "Magermilch": 250,        # 1 Glas (250 ml) Magermilch (max. 1% Fett)
+            "Banane": 120,            # 1 Banane
+            "Haferflocken": 40,       # 4 EL Hafermark
+            "Wasser": 400,            # 400 ml Wasser (200 ml / Portion)
+            "Honig": 15               # 1 EL Honig
+        }
+    },
+    {
+        "category": "Shakes",
+        "dish_name": "Schoko Shake",
+        "servings": 1,
+        "ingredients": {
+            "Magermilch": 250,        # 1 Glas (250 ml) Magermilch (max. 1% Fett)
+            "Haferflocken": 60,       # 6 EL Hafermark
+            "Kakaopulver": 20,        # 2 EL Instant-Kakaopulver
+            "Wasser": 200,            # 200 ml Wasser
+            "Zucker": 8               # 1 Päckchen Vanillezucker (~8g)
+        }
+    },
+    {
+        "category": "Shakes",
+        "dish_name": "Birnen-Jogurt Shake",
+        "servings": 1,
+        "ingredients": {
+            "Joghurt": 180,           # 1 kl. Becher Jogurt natur fettarm
+            "Birnensaft": 100,        # ½ Glas (100 ml) Birnensaft (100% Fruchtsaft)
+            "Haferflocken": 70,       # 7 EL Hafermark
+            "Wasser": 200,            # 200 ml Wasser
+            "Honig": 15,              # 1 EL Honig
+            "Zimt": 4                 # 1 Prise Zimt gemahlen (4g / Portion)
+        }
+    },
+
+    # -------------------------------------------------------------------------
+    # 3. AUFSTRICHE & SALATE (SPREADS & SALADS)
+    # -------------------------------------------------------------------------
+    {
+        "category": "Aufstriche & Salate",
+        "dish_name": "Tunfischaufstrich",
+        "servings": 10,
+        "ingredients": {
+            "Thunfisch, roh": 150,    # 1 Dose Tunfisch in Salzlake (abgetropft)
+            "Frischkäse, Doppelrahm": 250, # 250 g Frischkäse light
+            "Gurke": 40,              # 2 Essiggurken (fein gehackt)
+            "Schnittlauch, roh": 10,  # 2 EL Schnittlauch
+            "Wasser": 2000,           # 2000 ml Wasser (200 ml / Portion)
+            "Rapsöl": 5,              # 1 TL Rapsöl
+            "Senf": 5,                # 1 TL Estragonsenf
+            "Salz": 2.5,              # Salz (0.25g / Portion)
+            "Pfeffer": 40             # Pfeffer (4g / Portion)
+        }
+    },
+    {
+        "category": "Aufstriche & Salate",
+        "dish_name": "Schinkenaufstrich",
+        "servings": 10,
+        "ingredients": {
+            "Hüttenkäse, nature": 250, # 250 g Magertopfen
+            "Hinterschinken": 100,     # 100 g magerer Schinken (gekocht)
+            "Ei": 100,                 # 2 harte Eier
+            "Gurke": 40,               # 2 Gewürzgurken (gehackt)
+            "Wasser": 2000,            # 2000 ml Wasser (200 ml / Portion)
+            "Paprika": 40              # Paprikapulver edelsüß (4g / Portion)
+        }
+    },
+    {
+        "category": "Aufstriche & Salate",
+        "dish_name": "Dilltopfen",
+        "servings": 5,
+        "ingredients": {
+            "Hüttenkäse, nature": 250, # 250 g Magertopfen
+            "Dill": 15,                # 3 EL Dille
+            "Wasser": 1000,            # 1000 ml Wasser (200 ml / Portion)
+            "Rapsöl": 10,              # 1 EL Rapsöl
+            "Salz": 1.25               # Salz (0.25g / Portion)
+        }
+    },
+    {
+        "category": "Aufstriche & Salate",
+        "dish_name": "Kartoffelkäse",
+        "servings": 4,
+        "ingredients": {
+            "Kartoffel": 350,          # 350 g Erdäpfel
+            "Sauerrahm": 300,          # 1½ Becher Sauerrahm
+            "Joghurt": 300,            # 1½ Becher Jogurt
+            "Zwiebel": 80,             # 80 g rote Zwiebeln
+            "Paprika": 40,             # 40 g Paprika
+            "Wasser": 800,             # 800 ml Wasser (200 ml / Portion)
+            "Salz": 1.0                # Salz (0.25g / Portion)
+        }
+    },
+    {
+        "category": "Aufstriche & Salate",
+        "dish_name": "Tunfischsalat",
+        "servings": 1,
+        "ingredients": {
+            "Thunfisch, roh": 150,     # 150 g Tunfisch aus der Dose
+            "Radicchio, raw": 50,      # 50 g Radicchiosalat
+            "Gurke": 50,               # 50 g Salatgurke
+            "Paprika": 200,            # 1 rote Paprika & 1 grüne Paprika
+            "Zwiebel": 120,            # 1½ Zwiebeln
+            "Tomate": 120,             # 1 Tomate
+            "Oliven": 15,              # 4 schwarze Oliven
+            "Wasser": 200,             # 200 ml Wasser
+            "Rapsöl": 10,              # 1 EL Pflanzenöl
+            "Essig": 4,                # Essig (4g / Portion)
+            "Senf": 4,                 # Senf (4g / Portion)
+            "Knoblauch": 4,            # Knoblauch (4g / Portion)
+            "Pfeffer": 4,              # Pfeffer (4g / Portion)
+            "Salz": 0.25               # Salz (0.25g / Portion)
+        }
+    },
+    {
+        "category": "Aufstriche & Salate",
+        "dish_name": "Hering-Apfel-Salat",
+        "servings": 2,
+        "ingredients": {
+            "Atlantic herring": 150,   # 150 g marinierter Hering
+            "Apfel": 100,              # 100 g Apfel
+            "Gurke": 50,               # 50 g Gurke oder Zucchini
+            "Hüttenkäse, nature": 50,  # 50 g Magertopfen
+            "Buttermilch": 70,         # 70 ml Buttermilch
+            "Zwiebel": 25,             # 25 g Zwiebel
+            "Wasser": 400,             # 400 ml Wasser (200 ml / Portion)
+            "Dill": 8,                 # Dill (4g / Portion)
+            "Salz": 0.5,               # Salz (0.25g / Portion)
+            "Pfeffer": 8,              # Pfeffer (4g / Portion)
+            "Essig": 8,                # Essig (4g / Portion)
+            "Worcestershire sauce": 8  # Worcestersoße (4g / Portion)
+        }
+    },
+
+    # -------------------------------------------------------------------------
+    # 4. SUPPEN & NUDELGERICHTE (SOUPS & PASTA DISHES)
+    # -------------------------------------------------------------------------
+    {
+        "category": "Suppen & Nudelgerichte",
+        "dish_name": "Karottencremesuppe",
+        "servings": 1,
+        "ingredients": {
+            "Karotte": 100,            # 100 g Karotten
+            "Gemüsebouillon": 200,     # 200 ml Gemüsesuppe
+            "Wasser": 200,             # 200 ml Wasser
+            "Vollmilch, UHT": 60,      # 60 ml Vollmilch
+            "Joghurt": 15,             # 1 EL Jogurt
+            "Petersilie": 4,           # Petersilie (4g / Portion)
+            "Salz": 0.25               # Salz, Kräuter (0.25g / Portion)
+        }
+    },
+    {
+        "category": "Suppen & Nudelgerichte",
+        "dish_name": "Zucchinicremesuppe",
+        "servings": 1,
+        "ingredients": {
+            "Green zucchini": 180,     # 1 Zucchini
+            "Kartoffel": 80,           # 1 kleine Kartoffel
+            "Zwiebel": 120,            # 1½ Zwiebeln
+            "Knoblauch": 3,            # 1 Knoblauchzehe
+            "Wasser": 350,             # 350 ml Wasser
+            "Rapsöl": 5,               # 1 TL Öl
+            "Essig": 5,                # 1 TL Essig
+            "Dill": 4,                 # Dill, Estragon, Liebstöckel (4g / Portion)
+            "Salz": 0.25,              # Salz (0.25g / Portion)
+            "Pfeffer": 4               # Pfeffer (4g / Portion)
+        }
+    },
+    {
+        "category": "Suppen & Nudelgerichte",
+        "dish_name": "Gemüseauflauf mit Penne",
+        "servings": 4,
+        "ingredients": {
+            "Teigwaren": 300,          # 300 g Penne
+            "Green zucchini": 200,     # 200 g Zucchini
+            "Karotte": 200,            # 200 g Karotten
+            "Spargel": 200,            # 200 g Spargelspitzen
+            "Paprika": 120,            # 1 Paprikaschote
+            "Sonnenblumenöl": 30,      # 30 g Sonnenblumenöl
+            "Butter": 30,              # 30 g Butter (5 g für Form, 25 g für Sauce)
+            "Mehl": 25,                # 25 g Mehl (oder Vollkornmehl)
+            "Milch": 450,              # knapp 1/2 l Milch
+            "Wasser": 800,             # 800 ml Wasser (200 ml / Portion)
+            "Parmesan Cheese": 30,     # 3 EL Parmesan
+            "Salz": 1.0,               # Salz (0.25g / Portion)
+            "Pfeffer": 16              # Pfeffer (4g / Portion)
+        }
+    },
+    {
+        "category": "Suppen & Nudelgerichte",
+        "dish_name": "Spaghetti mit Tomatensoße",
+        "servings": 1,
+        "ingredients": {
+            "Teigwaren": 120,          # 120 g Spaghetti (roh)
+            "Tomate": 200,             # 200 g geschälte Tomaten (Dose/Tetrapack)
+            "Wasser": 200,             # 200 ml Wasser
+            "Parmesan Cheese": 20,     # 2 EL Parmesan (gerieben)
+            "Olivenöl": 5,             # 1 TL Olivenöl
+            "Basil": 4,                # Basilikum, Oregano (4g / Portion)
+            "Salz": 0.25               # Salz (0.25g / Portion)
+        }
+    },
+    {
+        "category": "Suppen & Nudelgerichte",
+        "dish_name": "Makkaroni mit Ricottasoße",
+        "servings": 2,
+        "ingredients": {
+            "Macaroni": 400,           # 400 g Makkaroni
+            "Ricotta Cheese": 250,     # 1 Packung Ricotta-Käse (fettarm)
+            "Wasser": 400,             # 400 ml Wasser (200 ml / Portion)
+            "Pesto, red": 15           # 1 EL Pesto
+        }
+    },
+    {
+        "category": "Suppen & Nudelgerichte",
+        "dish_name": "Gemüse-Lasagne",
+        "servings": 2,
+        "ingredients": {
+            "Teigwaren": 40,           # 40 g Lasagneblätter
+            "Spinat": 40,              # 40 g Spinat
+            "Aubergine": 40,           # 40 g Aubergine oder Zucchini
+            "Tomate": 60,              # ½ Tomate
+            "Hüttenkäse, nature": 40,  # 40 g Hüttenkäse
+            "Schmelzkäse": 20,         # 20 g Schmelzkäse
+            "Tomatensauce": 180,       # ½ Glas Tomaten-Basilikum-Sugo
+            "Magermilch": 100,         # 100 ml Magermilch
+            "Wasser": 400,             # 400 ml Wasser (200 ml / Portion)
+            "Dinkelmehl, Vollkorn": 5, # 1 TL Weizenvollkornmehl
+            "Margarine": 5,            # 1 TL Margarine
+            "Parmesan Cheese": 5,      # 1 TL Parmesan (gerieben)
+            "Salz": 0.5,               # Salz (0.25g / Portion)
+            "Pfeffer": 8               # Pfeffer (4g / Portion)
+        }
+    },
+
+    # -------------------------------------------------------------------------
+    # 5. HAUPTGERICHTE (MAIN COURSES)
+    # -------------------------------------------------------------------------
+    {
+        "category": "Hauptgerichte",
+        "dish_name": "Tortilla Wrap mit Putenfleisch und Käse",
+        "servings": 1,
+        "ingredients": {
+            "Tortilla": 80,            # 1–2 Tortillas (~80g)
+            "Turkey": 100,             # 100 g Putenbrust (feingehackt)
+            "Gouda": 60,               # 6 EL geriebener Käse (bis ca. 16% Fett)
+            "Zwiebel": 25,             # 1 Stange Jungzwiebel
+            "Paprika": 120,            # 1 grüner Paprika
+            "Tomatenpüree": 15,        # 1 EL Tomatenmark
+            "Wasser": 200,             # 200 ml Wasser
+            "Olivenöl": 7,             # 1 großzügiger EL Olivenöl
+            "Chili": 3                 # 1 TL Chili con Carne-Gewürzmischung
+        }
+    },
+    {
+        "category": "Hauptgerichte",
+        "dish_name": "Asiatische Hühnerbrust",
+        "servings": 1,
+        "ingredients": {
+            "Chicken": 120,            # 120 g Hühnerbrust
+            "Basmati Rice": 50,        # 50 g Basmatireis
+            "Paprika": 50,             # 50 g Paprika
+            "Bamboo shoot": 50,        # 50 g Bambussprossen
+            "Erbse": 50,               # 50 g Erbsen
+            "Sojasprossen, roh": 50,   # 50 g Sojasprossen
+            "Wasser": 200,             # 200 ml Wasser
+            "Sojasauce": 20,           # 2 EL Sojasoße
+            "Rapsöl": 10,              # 2 TL Öl
+            "Curry Leaf": 4            # Curry, Kurkuma, Paprikapulver (4g / Portion)
+        }
+    },
+    {
+        "category": "Hauptgerichte",
+        "dish_name": "Couscous mit Gemüse",
+        "servings": 1,
+        "ingredients": {
+            "Couscous": 100,           # 100 g Couscous (Instant)
+            "Aubergine": 250,          # 250 g Melanzani
+            "Tomate": 300,             # 3 geschälte Tomaten
+            "Wasser": 200,             # 200 ml Wasser
+            "Zitronensaft": 20,        # 2 EL frischer Zitronensaft
+            "Petersilie": 4,           # Petersilie (4g / Portion)
+            "Rosemary": 4,             # Rosmarin (4g / Portion)
+            "Salz": 0.25               # Salz (0.25g / Portion)
+        }
+    },
+    {
+        "category": "Hauptgerichte",
+        "dish_name": "Vegetarisches Chili",
+        "servings": 1,
+        "ingredients": {
+            "Lentils": 100,            # 100 g rote Linsen
+            "Kidney Beans": 100,       # 100 g rote Bohnen (Dose)
+            "Mais": 50,                # 50 g Mais
+            "Green zucchini": 100,     # 1 kleine Zucchini
+            "Tomate": 100,             # 1 Tomate
+            "Paprika": 180,            # je ½ rote, grüne und gelbe Paprika
+            "Zwiebel": 60,             # 1 kleine Zwiebel
+            "Wasser": 200,             # 200 ml Wasser
+            "Tomatenpüree": 15,        # 1 EL Tomatenmark
+            "Rapsöl": 10,              # 1 EL Rapsöl
+            "Knoblauch": 4,            # Knoblauch (4g / Portion)
+            "Sojasauce": 4,            # Sojasoße (4g / Portion)
+            "Chili": 4,                # Chili, Paprikapulver, Gewürze (4g / Portion)
+            "Salz": 0.25               # Salz (0.25g / Portion)
+        }
+    },
+    {
+        "category": "Hauptgerichte",
+        "dish_name": "Reis mit Pilzen",
+        "servings": 4,
+        "ingredients": {
+            "Brown Rice": 250,         # 250 g Vollreis
+            "Pilz": 300,               # 300 g Pilze
+            "Petersilie": 25,          # 1 Bund Petersilie
+            "Zwiebel": 100,            # 1 Zwiebel
+            "Wasser": 800,             # 800 ml Wasser (200 ml / Portion)
+            "Sonnenblumenöl": 10,      # 1 EL Sonnenblumenöl
+            "Salz": 1.0                # Salz (0.25g / Portion)
+        }
+    },
+    {
+        "category": "Hauptgerichte",
+        "dish_name": "Erdäpfelpfanne",
+        "servings": 1,
+        "ingredients": {
+            "Kartoffel": 200,          # 200 g Kartoffeln
+            "Paprika": 100,            # 100 g Paprika bunt
+            "Lauch, roh": 40,          # 40 g Lauch
+            "Feta Cheese": 20,         # 20 g Schafkäse
+            "Mozzarella": 20,          # 20 g Mozzarella fettarm
+            "Wasser": 200,             # 200 ml Wasser
+            "Sonnenblumenöl": 10,      # 1 EL Sonnenblumenöl
+            "Thymian": 4,              # Thymian (4g / Portion)
+            "Pfeffer": 4,              # Pfeffer (4g / Portion)
+            "Salz": 0.25               # Salz (0.25g / Portion)
+        }
+    },
+    {
+        "category": "Hauptgerichte",
+        "dish_name": "Überbackenes Fischfilet",
+        "servings": 1,
+        "ingredients": {
+            "Dorsch, roh": 240,        # 1 Fischfilet (ca. 240 g)
+            "Karotte": 60,             # 1 kleine Karotte
+            "Green zucchini": 120,     # 1½ kleine Zucchini
+            "Sauerrahm": 15,           # 1 EL Sauerrahm
+            "Gouda": 15,               # 1 EL Käse (35% F.i.T.)
+            "Wasser": 200,             # 200 ml Wasser
+            "Zitronensaft": 4,         # Zitronensaft (4g / Portion)
+            "Petersilie": 4,           # frische Kräuter (4g / Portion)
+            "Salz": 0.25               # Salz, Gewürze (0.25g / Portion)
+        }
+    },
+    {
+        "category": "Hauptgerichte",
+        "dish_name": "Dorsch mit Brokkoli",
+        "servings": 1,
+        "ingredients": {
+            "Dorsch, roh": 100,        # 100 g Dorsch (tiefgekühlt)
+            "Broccoli": 200,           # 200 g Brokkoli (frisch)
+            "Wasser": 200,             # 200 ml Wasser
+            "Rapsöl": 10,              # 1 EL Rapsöl
+            "Zitronensaft": 4,         # Zitronensaft (4g / Portion)
+            "Salz": 0.25               # Salz (0.25g / Portion)
+        }
+    },
+
+    # -------------------------------------------------------------------------
+    # 6. SÜSSSPEISEN (DESSERTS & SWEET DISHES)
+    # -------------------------------------------------------------------------
+    {
+        "category": "Süßspeisen",
+        "dish_name": "Pfirsich-Topfencreme",
+        "servings": 1,
+        "ingredients": {
+            "Hüttenkäse, nature": 250, # 250 ml Magertopfen
+            "Orangensaft": 100,        # 100 ml Orangensaft
+            "Pfirsich": 130,           # 2 Pfirsichhälften aus der Dose
+            "Wasser": 200              # 200 ml Wasser
+        }
+    },
+    {
+        "category": "Süßspeisen",
+        "dish_name": "Apfelnockerln mit Nüssen",
+        "servings": 2,
+        "ingredients": {
+            "Dinkelmehl, Vollkorn": 125, # 125 g Weizenvollkornmehl (oder Dinkel)
+            "Wasser": 400,             # 400 ml Wasser (200 ml / Portion)
+            "Ei": 50,                  # 1 Ei
+            "Apfel": 240,              # 2 Äpfel
+            "Haselnuss": 20,           # 2 EL gehackte Nüsse
+            "Rapsöl": 10,              # 1 EL Öl
+            "Rosine": 15,              # Rosinen
+            "Honig": 8,                # etwas Honig (4g / Portion)
+            "Zimt": 8,                 # Zimt (4g / Portion)
+            "Salz": 0.5                # Salz (0.25g / Portion)
+        }
+    },
+    {
+        "category": "Süßspeisen",
+        "dish_name": "Kaiserschmarrn",
+        "servings": 2,
+        "ingredients": {
+            "Ei": 200,                 # 4 Eier (getrennt in 4 Dotter und 4 Eiklar)
+            "Dinkelmehl, Vollkorn": 65,# 65 g Vollkornmehl
+            "Mehl": 60,                # 60 g Weißmehl
+            "Milch": 250,              # 1/4 l Milch
+            "Wasser": 400,             # 400 ml Wasser (200 ml / Portion)
+            "Zucker": 50,              # 50 g Zucker (30 g Teig, 20 g Bestreuen)
+            "Salz": 0.5                # Prise Salz (0.25g / Portion)
+        }
+    }
+]
+
+````
+
+Put the code files in the correct Folders, modify any files necessary, create any file necessary and implement Above requirements and add documentation in README.md.
