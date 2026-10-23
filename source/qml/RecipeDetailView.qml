@@ -16,6 +16,34 @@ Item {
         loadRecipeData();
     }
 
+    Connections {
+        target: pantryModel
+        function onPantryChanged() {
+            if (root.recipeId !== "") {
+                root.currentRecipe = recipeModel.getRecipeById(root.recipeId);
+                root.updateIngredients();
+            }
+        }
+    }
+
+    Connections {
+        target: settingsManager
+        function onStarredChanged() {
+            if (root.recipeId !== "") {
+                root.currentRecipe = recipeModel.getRecipeById(root.recipeId);
+            }
+        }
+    }
+
+    Connections {
+        target: recipeRepo
+        function onRecipesChanged() {
+            if (root.recipeId !== "") {
+                root.loadRecipeData();
+            }
+        }
+    }
+
     function loadRecipeData() {
         if (recipeId === "") return;
         currentRecipe = recipeModel.getRecipeById(recipeId);
