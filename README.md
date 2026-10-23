@@ -1,6 +1,6 @@
-# Malzeit 🥗
+# Mahlzeit 🥗
 
-**Malzeit** ist eine moderne, datenschutzfreundliche Web- und Mobil-Applikation zur smarten Vorrats- und Rezeptplanung, entwickelt in **modernem C++20** und **Qt 6.8.3 Quick / QML**.
+**Mahlzeit** ist eine moderne, datenschutzfreundliche Web- und Mobil-Applikation zur smarten Vorrats- und Rezeptplanung, entwickelt in **modernem C++20** und **Qt 6.8.3 Quick / QML**.
 
 Die App läuft im Browser (WebAssembly single-threaded), auf dem Desktop zu Entwicklungs- und Testzwecken und ist so aufgebaut, dass sie nahtlos als Git-Submodul in ein **Android-Projekt** eingebunden werden kann.
 
@@ -86,7 +86,7 @@ Sobald **Worker URL** und **Raum-ID** in den Einstellungen eingetragen sind (und
    npx wrangler login
    npx wrangler deploy
    ```
-2. Kopiere die ausgegebene Worker-URL (z. B. `https://malzeit-pantry-sync.<dein-name>.workers.dev`).
+2. Kopiere die ausgegebene Worker-URL (z. B. `https://Mahlzeit-pantry-sync.<dein-name>.workers.dev`).
 3. Trage in der App unter **Einstellungen -> Cloudflare Vorratskammer-Sync** die **Worker URL**, eine gemeinsame **Raum-ID** (z. B. `unser-haushalt`) und optional einen geheimen **Token** ein.
 
 Ausführliche Details findest du in [cloudflare/README.md](cloudflare/README.md).
@@ -96,7 +96,7 @@ Ausführliche Details findest du in [cloudflare/README.md](cloudflare/README.md)
 ## 📁 Repository-Struktur
 
 ```text
-Malzeit/
+Mahlzeit/
 ├── source/                      # Sämtlicher C++ Quellcode und QML-Dateien
 │   ├── main.cpp                 # Programmeinstieg & Registrierung der Controller
 │   ├── models/                  # Datenmodelle
@@ -125,7 +125,7 @@ Malzeit/
 │   └── README.md                # 3-Minuten Deployment-Anleitung & Sync-Architektur
 ├── tests/                       # QTest Unit-Tests
 │   ├── CMakeLists.txt
-│   └── test_malzeit.cpp         # Testabdeckung für Rezepte, Skalierung, Aliase & Logik
+│   └── test_Mahlzeit.cpp         # Testabdeckung für Rezepte, Skalierung, Aliase & Logik
 ├── index.html                   # GitHub Pages Landing-Page mit Datenschutzhinweis
 ├── CMakeLists.txt               # CMake-Projektdatei (Qt 6.8+, C++20)
 └── README.md                    # Diese Dokumentation
@@ -142,7 +142,7 @@ Malzeit/
 
 ### Tests ausführen
 - Aktiviere beim Konfigurieren des CMake-Projekts `BUILD_TESTING`.
-- Führe das Target `testMalzeit` aus oder starte im Terminal:
+- Führe das Target `testMahlzeit` aus oder starte im Terminal:
   ```bash
   ctest --output-on-failure
   ```
