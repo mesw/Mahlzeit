@@ -57,7 +57,7 @@ Die App läuft im Browser (WebAssembly single-threaded), auf dem Desktop zu Entw
 ### 5. Einstellungen (The Settings)
 - **Kategorien & Zeitfenster**: Zeitfenster für Mahlzeiten (Frühstück, Snack, Mittag, Abendessen) flexibel bearbeiten oder auf Standard zurücksetzen.
 - **Cloudflare Durable Object Sync**: Konfiguration von Worker-URL, Raum-ID und Authentifizierungs-Token zur privaten Synchronisation.
-- **Rezept-Katalog & Aktualisierung**: Rezepte können auf Knopfdruck online von `https://mesw.github.io/Malzeit/res/recipies.json` aktualisiert werden, ohne die WebAssembly-Applikation neu kompilieren zu müssen.
+- **Rezept-Katalog & Aktualisierung**: Rezepte können auf Knopfdruck online von `https://mesw.github.io/Malzeit/resources/recipes.json` aktualisiert werden, ohne die WebAssembly-Applikation neu kompilieren zu müssen.
 - **Werksreset**: Zurücksetzen aller Einstellungen, Vorräte oder Rezepte.
 
 ---
@@ -87,9 +87,7 @@ Malzeit/
 │       └── SettingsView.qml     # Zeitfenster, Cloudflare-Sync & Aktualisierung
 ├── resources/                   # Ressourcen (in App gebündelt)
 │   ├── recipes.json             # 32 vordefinierte Rezepte
-│   └── recipies.json            # Alias für alternative Schreibweise
-├── res/                         # Web-Ressourcen für GitHub Pages Hosting
-│   └── recipies.json            # URL: mesw.github.io/Malzeit/res/recipies.json
+│   └── fonts/                   # NotoColorEmoji.ttf für WebAssembly
 ├── cloudflare/                  # Cloudflare Worker & Durable Object
 │   ├── worker.js                # Serverloser Durable-Object-Sync-Code
 │   ├── wrangler.toml            # Cloudflare Deployment-Konfiguration

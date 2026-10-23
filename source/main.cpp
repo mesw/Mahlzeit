@@ -3,6 +3,8 @@
 #include <QQmlContext>
 #include <QClipboard>
 #include <QIcon>
+#include <QFontDatabase>
+#include <QDebug>
 
 #include "services/SettingsManager.h"
 #include "services/RecipeRepository.h"
@@ -34,6 +36,16 @@ int main(int argc, char *argv[])
     app.setApplicationName("Malzeit");
     app.setApplicationDisplayName("Malzeit");
 
+#ifdef HAS_EMOJI_FONT
+    const int fontId = QFontDatabase::addApplicationFont(
+        QStringLiteral(":/fonts/NotoColorEmoji.ttf"));
+    if (fontId == -1) {
+        qWarning("Failed to load NotoColorEmoji.ttf from resources");
+    } else {
+        qInfo() << "Loaded emoji font from resources, id:" << fontId;
+    }
+#endif
+
     SettingsManager settingsManager;
     RecipeRepository recipeRepo(&settingsManager);
     PantryModel pantryModel(&recipeRepo, &settingsManager);
@@ -59,7 +71,11 @@ int main(int argc, char *argv[])
                      &app, []() { QCoreApplication::exit(-1); },
                      Qt::QueuedConnection);
 
-    engine.loadFromModule("Malzeit", "Main");
+    const QUrl url(QStringLiteral("qrc:/source/qml/Main.qml"));
+    engine.load(url);
+    if (engine.rootObjects().isEmpty()) {
+        engine.loadFromModule("Malzeit", "Main");
+    }
 
     return app.exec();
 }

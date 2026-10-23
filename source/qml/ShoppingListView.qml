@@ -104,6 +104,7 @@ Item {
             Layout.fillHeight: true
             clip: true
             spacing: 6
+            flickableDirection: Flickable.VerticalFlick
             model: shoppingModel
             boundsBehavior: Flickable.StopAtBounds
 

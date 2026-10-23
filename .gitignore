@@ -82,3 +82,4 @@ CMakeLists.txt.user*
 /build/Desktop*
 /build/*Debug*
 !/build/WebAssembly_Qt_6_8_3_single_threaded-Release/
+/build

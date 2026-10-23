@@ -32,6 +32,7 @@ Item {
         anchors.fill: parent
         contentWidth: parent.width
         clip: true
+        //ScrollBar.horizontal: ScrollBar { policy: ScrollBar.AlwaysOff; visible: false }
 
         ColumnLayout {
             width: parent.width
@@ -402,20 +403,22 @@ Item {
                             color: "#5A6B5C"
                         }
 
-                        TextArea {
-                            id: editArea
+                        Rectangle {
                             Layout.fillWidth: true
                             Layout.preferredHeight: 120
-                            text: currentRecipe.instructions || ""
-                            placeholderText: qsTr("### 1. Vorbereitung\nAlle Zutaten bereitstellen...\n\n### 2. Kochen\nZusammen erhitzen und abschmecken.")
-                            wrapMode: TextEdit.Wrap
-                            selectByMouse: true
+                            color: "#FAFAFA"
+                            radius: 8
+                            border.color: editArea.activeFocus ? "#2E7D32" : "#CCD4CC"
+                            border.width: 1
 
-                            background: Rectangle {
-                                color: "#FAFAFA"
-                                radius: 8
-                                border.color: "#CCD4CC"
-                                border.width: 1
+                            TextArea {
+                                id: editArea
+                                anchors.fill: parent
+                                anchors.margins: 4
+                                text: currentRecipe.instructions || ""
+                                placeholderText: qsTr("### 1. Vorbereitung\nAlle Zutaten bereitstellen...\n\n### 2. Kochen\nZusammen erhitzen und abschmecken.")
+                                wrapMode: TextEdit.Wrap
+                                selectByMouse: true
                             }
                         }
 

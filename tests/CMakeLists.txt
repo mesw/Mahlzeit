@@ -30,7 +30,6 @@ qt_add_resources(testMalzeit "test_resources"
     PREFIX "/"
     FILES
         ../resources/recipes.json
-        ../resources/recipies.json
 )
 
 target_link_libraries(testMalzeit PRIVATE

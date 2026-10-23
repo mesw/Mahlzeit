@@ -62,12 +62,12 @@ Item {
         }
 
         // Suggestion System Filter Switches (Default ON as requested)
-        RowLayout {
+        Flow {
             Layout.fillWidth: true
-            spacing: 12
+            spacing: 10
 
             // Ready to cook switch
-            RowLayout {
+            ColumnLayout {
                 spacing: 4
                 Switch {
                     id: readySwitch
@@ -83,7 +83,7 @@ Item {
             }
 
             // Time slot switch
-            RowLayout {
+            ColumnLayout {
                 spacing: 4
                 Switch {
                     id: timeSwitch
@@ -99,7 +99,7 @@ Item {
             }
 
             // Starred switch
-            RowLayout {
+            ColumnLayout {
                 spacing: 4
                 Switch {
                     id: starSwitch
@@ -115,16 +115,29 @@ Item {
             }
         }
 
-        // Category Pills (Horizontal Scroll)
-        ScrollView {
+        // Category Pills (Horizontal Scroll & Desktop Mouse Drag)
+        Flickable {
+            id: catFlickable
             Layout.fillWidth: true
             Layout.preferredHeight: 38
+            contentWidth: catRow.implicitWidth + 16
+            contentHeight: height
             clip: true
-            ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
-            ScrollBar.vertical.policy: ScrollBar.AlwaysOff
+            flickableDirection: Flickable.HorizontalFlick
+            boundsBehavior: Flickable.StopAtBounds
+
+            WheelHandler {
+                acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad
+                onWheel: (event) => {
+                    var delta = event.angleDelta.y !== 0 ? event.angleDelta.y : event.angleDelta.x;
+                    catFlickable.contentX = Math.max(0, Math.min(catFlickable.contentWidth - catFlickable.width, catFlickable.contentX - delta));
+                }
+            }
 
             Row {
+                id: catRow
                 spacing: 6
+                height: parent.height
 
                 Repeater {
                     model: recipeModel.availableCategories
@@ -149,11 +162,31 @@ Item {
 
                         MouseArea {
                             anchors.fill: parent
+                            cursorShape: Qt.PointingHandCursor
+                            property real pressX: 0
+                            property bool dragged: false
+
+                            onPressed: (mouse) => {
+                                pressX = mouse.x;
+                                dragged = false;
+                            }
+
+                            onPositionChanged: (mouse) => {
+                                var dx = mouse.x - pressX;
+                                if (Math.abs(dx) > 6 || dragged) {
+                                    dragged = true;
+                                    var newContentX = catFlickable.contentX - dx;
+                                    catFlickable.contentX = Math.max(0, Math.min(catFlickable.contentWidth - catFlickable.width, newContentX));
+                                }
+                            }
+
                             onClicked: {
-                                if (modelData === "Alle") {
-                                    recipeModel.categoryFilter = "";
-                                } else {
-                                    recipeModel.categoryFilter = modelData;
+                                if (!dragged) {
+                                    if (modelData === "Alle") {
+                                        recipeModel.categoryFilter = "";
+                                    } else {
+                                        recipeModel.categoryFilter = modelData;
+                                    }
                                 }
                             }
                         }
@@ -170,6 +203,8 @@ Item {
             clip: true
             spacing: 10
             model: recipeModel
+            boundsBehavior: Flickable.StopAtBounds
+            flickableDirection: Flickable.VerticalFlick
 
             delegate: Rectangle {
                 width: listView.width
@@ -191,46 +226,57 @@ Item {
                     spacing: 8
 
                     // Top Row: Category + Star Button
-                    RowLayout {
+                    Item {
                         Layout.fillWidth: true
+                        implicitHeight: Math.max(badgeRow.implicitHeight, starBtn.height)
 
-                        Rectangle {
-                            height: 22
-                            width: catBadgeText.implicitWidth + 14
-                            radius: 11
-                            color: "#E8F5E9"
+                        Row {
+                            id: badgeRow
+                            anchors.left: parent.left
+                            anchors.right: starBtn.left
+                            anchors.rightMargin: 8
+                            anchors.verticalCenter: parent.verticalCenter
+                            spacing: 6
 
-                            Text {
-                                id: catBadgeText
-                                anchors.centerIn: parent
-                                text: model.category
-                                font.pixelSize: 11
-                                font.bold: true
-                                color: "#2E7D32"
+                            Rectangle {
+                                height: 22
+                                width: catBadgeText.implicitWidth + 14
+                                radius: 11
+                                color: "#E8F5E9"
+
+                                Text {
+                                    id: catBadgeText
+                                    anchors.centerIn: parent
+                                    text: model.category
+                                    font.pixelSize: 11
+                                    font.bold: true
+                                    color: "#2E7D32"
+                                }
+                            }
+
+                            // Time match badge
+                            Rectangle {
+                                visible: model.isTimeMatch
+                                height: 22
+                                width: timeBadgeText.implicitWidth + 14
+                                radius: 11
+                                color: "#E3F2FD"
+
+                                Text {
+                                    id: timeBadgeText
+                                    anchors.centerIn: parent
+                                    text: qsTr("🕒 Jetzt passend")
+                                    font.pixelSize: 11
+                                    color: "#1976D2"
+                                }
                             }
                         }
 
-                        // Time match badge
+                        // Star Button (always pinned to the right inside card)
                         Rectangle {
-                            visible: model.isTimeMatch
-                            height: 22
-                            width: timeBadgeText.implicitWidth + 14
-                            radius: 11
-                            color: "#E3F2FD"
-
-                            Text {
-                                id: timeBadgeText
-                                anchors.centerIn: parent
-                                text: qsTr("🕒 Jetzt passend")
-                                font.pixelSize: 11
-                                color: "#1976D2"
-                            }
-                        }
-
-                        Item { Layout.fillWidth: true }
-
-                        // Star Button
-                        Rectangle {
+                            id: starBtn
+                            anchors.right: parent.right
+                            anchors.verticalCenter: parent.verticalCenter
                             width: 32
                             height: 32
                             radius: 16
@@ -328,6 +374,7 @@ Item {
 
                 Text {
                     Layout.alignment: Qt.AlignHCenter
+                                            wrapMode: Text.Wrap
                     text: qsTr("Keine Rezepte für die aktuellen Filterkriterien.")
                     font.pixelSize: 15
                     font.bold: true
@@ -336,6 +383,7 @@ Item {
 
                 Text {
                     Layout.alignment: Qt.AlignHCenter
+                                            wrapMode: Text.Wrap
                     text: qsTr("Tipp: Schalte 'Kochbereit' oder 'Passende Uhrzeit' oben aus, um alle Rezepte zu sehen.")
                     font.pixelSize: 12
                     color: "#7E8C7E"

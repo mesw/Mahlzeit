@@ -48,15 +48,59 @@ qt_add_qml_module(appMalzeit
         source/qml/SettingsView.qml
     RESOURCES
         resources/recipes.json
-        resources/recipies.json
 )
 
 qt_add_resources(appMalzeit "recipes_bundle"
     PREFIX "/"
     FILES
         resources/recipes.json
-        resources/recipies.json
 )
+
+# ── Emoji font ────────────────────────────────────────────────────────────────
+# Source: NotoColorEmoji.ttf embedded as resource.
+# Critical for WebAssembly which has no system fonts for emoji rendering.
+set(EMOJI_FONT "")
+set(EMOJI_FONT_CANDIDATES
+    "${CMAKE_CURRENT_SOURCE_DIR}/resources/fonts/NotoColorEmoji.ttf"
+    "${CMAKE_CURRENT_SOURCE_DIR}/third_party/noto-emoji/fonts/NotoColorEmoji.ttf"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../checklist/third_party/noto-emoji/fonts/NotoColorEmoji.ttf"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../QtSpeis/third_party/noto-emoji/fonts/NotoColorEmoji.ttf"
+)
+
+foreach(candidate ${EMOJI_FONT_CANDIDATES})
+    if(EXISTS "${candidate}")
+        set(EMOJI_FONT "${candidate}")
+        break()
+    endif()
+endforeach()
+
+if(EMOJI_FONT)
+    set_source_files_properties("${EMOJI_FONT}"
+        PROPERTIES QT_RESOURCE_ALIAS "NotoColorEmoji.ttf"
+    )
+    qt_add_resources(appMalzeit "appfonts"
+        PREFIX "/fonts"
+        FILES "${EMOJI_FONT}"
+        BIG_RESOURCES
+    )
+    target_compile_definitions(appMalzeit PRIVATE HAS_EMOJI_FONT)
+    message(STATUS "Emoji font found: ${EMOJI_FONT}")
+else()
+    message(WARNING "Emoji font not found. Emojis may not render on WebAssembly.")
+endif()
+
+# ── WebAssembly ───────────────────────────────────────────────────────────────
+if(EMSCRIPTEN)
+    target_compile_definitions(appMalzeit PRIVATE MALZEIT_WASM)
+
+    target_link_options(appMalzeit PRIVATE
+        "SHELL:-s ALLOW_MEMORY_GROWTH=1"
+    )
+
+    set_target_properties(appMalzeit PROPERTIES
+        QT_WASM_INITIAL_MEMORY "64MB"
+    )
+endif()
 
 set_target_properties(appMalzeit PROPERTIES
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}

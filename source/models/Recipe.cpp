@@ -82,15 +82,6 @@ Recipe Recipe::fromJsonObject(const QJsonObject &obj) {
                 ings.append(ing);
             }
         }
-    } else if (obj.contains("ingredients") && obj.value("ingredients").isObject()) {
-        const QJsonObject ingObj = obj.value("ingredients").toObject();
-        for (auto it = ingObj.constBegin(); it != ingObj.constEnd(); ++it) {
-            RecipeIngredient ing;
-            ing.name = it.key();
-            ing.amount = it.value().toDouble();
-            ing.unit = inferUnit(ing.name);
-            ings.append(ing);
-        }
     }
 
     r.setIngredients(ings);
@@ -105,17 +96,14 @@ QJsonObject Recipe::toJsonObject() const {
     obj["servings"] = m_servings;
     obj["instructions"] = m_instructions;
 
-    QJsonObject ingObj;
     QJsonArray detailsArr;
     for (const auto &ing : m_ingredients) {
-        ingObj[ing.name] = ing.amount;
         QJsonObject d;
         d["name"] = ing.name;
         d["amount"] = ing.amount;
         d["unit"] = ing.unit;
         detailsArr.append(d);
     }
-    obj["ingredients"] = ingObj;
     obj["ingredient_details"] = detailsArr;
 
     return obj;

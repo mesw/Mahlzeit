@@ -4,1472 +4,526 @@
     "dish_name": "Milchreis mit Pfirsich und Honig",
     "category": "Frühstück & Breie",
     "servings": 1,
-    "ingredients": {
-      "Magermilch": 225,
-      "Reis": 30,
-      "Pfirsich": 125,
-      "Honig": 5,
-      "Wasser": 200,
-      "Salz": 0.25,
-      "Zimt": 4
-    },
     "ingredient_details": [
-      {
-        "name": "Magermilch",
-        "amount": 225,
-        "unit": "ml"
-      },
-      {
-        "name": "Reis",
-        "amount": 30,
-        "unit": "g"
-      },
-      {
-        "name": "Pfirsich",
-        "amount": 125,
-        "unit": "g"
-      },
-      {
-        "name": "Honig",
-        "amount": 5,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 200,
-        "unit": "ml"
-      },
-      {
-        "name": "Salz",
-        "amount": 0.25,
-        "unit": "g"
-      },
-      {
-        "name": "Zimt",
-        "amount": 4,
-        "unit": "g"
-      }
+      { "name": "Magermilch", "amount": 225, "unit": "ml" },
+      { "name": "Salz", "amount": 1, "unit": "Prise" },
+      { "name": "Rundkornreis", "amount": 30, "unit": "g" },
+      { "name": "Pfirsichkompottobst", "amount": 125, "unit": "g" },
+      { "name": "Honig", "amount": 1, "unit": "TL" },
+      { "name": "Zimt oder Instantkakao", "amount": 1, "unit": "TL (optional)" }
     ],
-    "instructions": ""
-  },
-  {
-    "id": "hirsebrei",
-    "dish_name": "Hirsebrei",
-    "category": "Frühstück & Breie",
-    "servings": 2,
-    "ingredients": {
-      "Hirse": 100,
-      "Wasser": 400,
-      "Dattel": 30,
-      "Haselnuss": 5,
-      "Honig": 15,
-      "Apfel": 120,
-      "Zimt": 8,
-      "Zitronensaft": 8,
-      "Ingwer": 8
-    },
-    "ingredient_details": [
-      {
-        "name": "Hirse",
-        "amount": 100,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 400,
-        "unit": "ml"
-      },
-      {
-        "name": "Dattel",
-        "amount": 30,
-        "unit": "g"
-      },
-      {
-        "name": "Haselnuss",
-        "amount": 5,
-        "unit": "g"
-      },
-      {
-        "name": "Honig",
-        "amount": 15,
-        "unit": "g"
-      },
-      {
-        "name": "Apfel",
-        "amount": 120,
-        "unit": "g"
-      },
-      {
-        "name": "Zimt",
-        "amount": 8,
-        "unit": "g"
-      },
-      {
-        "name": "Zitronensaft",
-        "amount": 8,
-        "unit": "ml"
-      },
-      {
-        "name": "Ingwer",
-        "amount": 8,
-        "unit": "g"
-      }
-    ],
-    "instructions": ""
+    "instructions": "Milch mit Salz aufkochen, Rundkornreis einstreuen. Bei schwacher Hitze köcheln lassen bis der Reis weich ist, Honig hinzufügen. Öfters umrühren, da der Milchreis leicht anbrennt. Kompottobst in mundgerechte Stücke schneiden und nach Belieben unterheben. Mit Zimt oder Kakao bestreuen oder auf der Oberfläche dekorieren."
   },
   {
     "id": "apfelmuesli",
     "dish_name": "Apfelmüsli",
     "category": "Frühstück & Breie",
     "servings": 1,
-    "ingredients": {
-      "Apfel": 120,
-      "Müsli": 40,
-      "Joghurt": 250,
-      "Wasser": 200,
-      "Haselnuss": 10,
-      "Sonnenblumenkern": 10,
-      "Rosine": 10,
-      "Honig": 5
-    },
     "ingredient_details": [
-      {
-        "name": "Apfel",
-        "amount": 120,
-        "unit": "g"
-      },
-      {
-        "name": "Müsli",
-        "amount": 40,
-        "unit": "g"
-      },
-      {
-        "name": "Joghurt",
-        "amount": 250,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 200,
-        "unit": "ml"
-      },
-      {
-        "name": "Haselnuss",
-        "amount": 10,
-        "unit": "g"
-      },
-      {
-        "name": "Sonnenblumenkern",
-        "amount": 10,
-        "unit": "g"
-      },
-      {
-        "name": "Rosine",
-        "amount": 10,
-        "unit": "g"
-      },
-      {
-        "name": "Honig",
-        "amount": 5,
-        "unit": "g"
-      }
+      { "name": "Apfel", "amount": 1, "unit": "Stk." },
+      { "name": "Haselnüsse", "amount": 1, "unit": "EL" },
+      { "name": "Sonnenblumenkerne", "amount": 1, "unit": "EL" },
+      { "name": "Rosinen", "amount": 2, "unit": "TL" },
+      { "name": "Müsli", "amount": 4, "unit": "EL" },
+      { "name": "Jogurt", "amount": 0.25, "unit": "l" },
+      { "name": "Honig", "amount": 1, "unit": "TL" }
     ],
-    "instructions": ""
-  },
-  {
-    "id": "himbeer-apfel-muesli",
-    "dish_name": "Himbeer-Apfel-Müsli",
-    "category": "Frühstück & Breie",
-    "servings": 1,
-    "ingredients": {
-      "Haferflocken": 40,
-      "Wasser": 200,
-      "Himbeere": 100,
-      "Apfelmus": 40,
-      "Joghurt": 270,
-      "Zitronensaft": 4,
-      "Honig": 4
-    },
-    "ingredient_details": [
-      {
-        "name": "Haferflocken",
-        "amount": 40,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 200,
-        "unit": "ml"
-      },
-      {
-        "name": "Himbeere",
-        "amount": 100,
-        "unit": "g"
-      },
-      {
-        "name": "Apfelmus",
-        "amount": 40,
-        "unit": "g"
-      },
-      {
-        "name": "Joghurt",
-        "amount": 270,
-        "unit": "g"
-      },
-      {
-        "name": "Zitronensaft",
-        "amount": 4,
-        "unit": "ml"
-      },
-      {
-        "name": "Honig",
-        "amount": 4,
-        "unit": "g"
-      }
-    ],
-    "instructions": ""
+    "instructions": "Ungeschälten Apfel in kleine Stücke schneiden. Mit Haselnüssen, Sonnenblumenkernen, Rosinen und Müsli verrühren. Jogurt darunter rühren und mit Honig süßen."
   },
   {
     "id": "klassisches-fruehstueck",
     "dish_name": "Klassisches Frühstück",
     "category": "Frühstück & Breie",
     "servings": 1,
-    "ingredients": {
-      "Weizenvollkornbrot": 130,
-      "Gouda": 50,
-      "Butter": 10,
-      "Honig": 10,
-      "Orangensaft": 125,
-      "Tee": 200,
-      "Wasser": 200,
-      "Zucker": 5
-    },
     "ingredient_details": [
-      {
-        "name": "Weizenvollkornbrot",
-        "amount": 130,
-        "unit": "g"
-      },
-      {
-        "name": "Gouda",
-        "amount": 50,
-        "unit": "g"
-      },
-      {
-        "name": "Butter",
-        "amount": 10,
-        "unit": "g"
-      },
-      {
-        "name": "Honig",
-        "amount": 10,
-        "unit": "g"
-      },
-      {
-        "name": "Orangensaft",
-        "amount": 125,
-        "unit": "ml"
-      },
-      {
-        "name": "Tee",
-        "amount": 200,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 200,
-        "unit": "ml"
-      },
-      {
-        "name": "Zucker",
-        "amount": 5,
-        "unit": "g"
-      }
+      { "name": "Vollkornweckerl", "amount": 2, "unit": "Stk." },
+      { "name": "Magerer Schnittkäse (< 35 % F.i.Tr.)", "amount": 2, "unit": "Scheiben" },
+      { "name": "Butter", "amount": 10, "unit": "g" },
+      { "name": "Früchtetee", "amount": 1, "unit": "Tasse" },
+      { "name": "Zucker", "amount": 1, "unit": "TL" },
+      { "name": "Honig", "amount": 10, "unit": "g" },
+      { "name": "Orangensaft", "amount": 0.125, "unit": "l" }
     ],
-    "instructions": ""
+    "instructions": "Vollkornweckerl mit Butter und magerem Schnittkäse belegen. Früchtetee mit einem Teelöffel Zucker servieren. Orangensaft und Honig dazu reichen."
+  },
+  {
+    "id": "hirsebrei",
+    "dish_name": "Hirsebrei",
+    "category": "Frühstück & Breie",
+    "servings": 2,
+    "ingredient_details": [
+      { "name": "Hirse", "amount": 100, "unit": "g" },
+      { "name": "Wasser", "amount": 300, "unit": "ml" },
+      { "name": "Trockenfrüchte", "amount": 4, "unit": "Stk." },
+      { "name": "Gehackte Nüsse", "amount": 1, "unit": "TL" },
+      { "name": "Honig", "amount": 1, "unit": "EL" }
+    ],
+    "instructions": "Hirse heiß abschwemmen und mit Wasser bei kleiner Flamme zugedeckt 5 bis 10 Minuten köcheln lassen, bis die meiste Flüssigkeit verkocht ist. Anschließend zugedeckt etwa 20 Minuten ausquellen lassen. Mit Zimt, etwas Zitronensaft, Honig und optional frisch geriebenem Ingwer verfeinern. Einen frisch geriebenen Apfel dazugeben."
+  },
+  {
+    "id": "himbeer-apfel-muesli",
+    "dish_name": "Himbeer-Apfel-Müsli",
+    "category": "Frühstück & Breie",
+    "servings": 1,
+    "ingredient_details": [
+      { "name": "Haferflocken", "amount": 4, "unit": "EL" },
+      { "name": "Heißes Wasser", "amount": null, "unit": "nach Bedarf" },
+      { "name": "Apfelmus", "amount": 2, "unit": "EL" },
+      { "name": "Apfel (alternativ)", "amount": 1, "unit": "Stk." },
+      { "name": "Himbeeren", "amount": 100, "unit": "g" },
+      { "name": "Jogurt", "amount": 0.5, "unit": "Becher" },
+      { "name": "Zitronensaft", "amount": null, "unit": "etwas" },
+      { "name": "Honig", "amount": null, "unit": "optional" }
+    ],
+    "instructions": "Haferflocken mit heißem Wasser gut bedecken und etwa 15 Minuten quellen lassen. Überschüssiges Wasser ableeren. Apfelmus oder geriebenen Apfel sowie Himbeeren und Jogurt zugeben. Mit Zitronensaft und eventuell etwas Honig abschmecken. Vor dem Servieren können einige Cornflakes darüber gestreut werden."
   },
   {
     "id": "bananen-himbeer-shake",
     "dish_name": "Bananen-Himbeer Shake",
     "category": "Shakes",
     "servings": 2,
-    "ingredients": {
-      "Joghurt": 180,
-      "Banane": 120,
-      "Himbeere": 100,
-      "Magermilch": 180,
-      "Haferflocken": 30,
-      "Wasser": 400
-    },
     "ingredient_details": [
-      {
-        "name": "Joghurt",
-        "amount": 180,
-        "unit": "g"
-      },
-      {
-        "name": "Banane",
-        "amount": 120,
-        "unit": "g"
-      },
-      {
-        "name": "Himbeere",
-        "amount": 100,
-        "unit": "g"
-      },
-      {
-        "name": "Magermilch",
-        "amount": 180,
-        "unit": "ml"
-      },
-      {
-        "name": "Haferflocken",
-        "amount": 30,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 400,
-        "unit": "ml"
-      }
+      { "name": "Vanillejogurt", "amount": 1, "unit": "kl. Becher (180 g)" },
+      { "name": "Banane", "amount": 1, "unit": "Stk." },
+      { "name": "Himbeeren", "amount": 100, "unit": "g" },
+      { "name": "Magermilch (max. 1 % Fett)", "amount": 1, "unit": "kl. Tasse (180 ml)" },
+      { "name": "Haferflocken", "amount": 3, "unit": "EL" }
     ],
-    "instructions": ""
+    "instructions": "Alle Zutaten mixen. Tipp: Wenn Sie diesen Shake kurz vor der Belastung trinken (spätestens 1 Stunde vorher), verwenden Sie Hafermark statt Haferflocken."
   },
   {
     "id": "bananen-shake",
     "dish_name": "Bananen-Shake",
     "category": "Shakes",
     "servings": 2,
-    "ingredients": {
-      "Magermilch": 250,
-      "Banane": 120,
-      "Haferflocken": 40,
-      "Wasser": 400,
-      "Honig": 15
-    },
     "ingredient_details": [
-      {
-        "name": "Magermilch",
-        "amount": 250,
-        "unit": "ml"
-      },
-      {
-        "name": "Banane",
-        "amount": 120,
-        "unit": "g"
-      },
-      {
-        "name": "Haferflocken",
-        "amount": 40,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 400,
-        "unit": "ml"
-      },
-      {
-        "name": "Honig",
-        "amount": 15,
-        "unit": "g"
-      }
+      { "name": "Magermilch (max. 1 % Fett)", "amount": 1, "unit": "Glas (250 ml)" },
+      { "name": "Banane", "amount": 1, "unit": "Stk." },
+      { "name": "Hafermark", "amount": 4, "unit": "EL" },
+      { "name": "Honig", "amount": 1, "unit": "EL" }
     ],
-    "instructions": ""
+    "instructions": "Alle Zutaten mixen. Tipp: Hafermark enthält viele leicht verdauliche Kohlenhydrate, die länger Energie liefern als reiner Zucker. 1 bis 2 EL Hafermark in Flüssigkeit aufgelöst liefern auch während der Belastung zusätzliche Energie."
   },
   {
     "id": "schoko-shake",
     "dish_name": "Schoko Shake",
     "category": "Shakes",
     "servings": 1,
-    "ingredients": {
-      "Magermilch": 250,
-      "Haferflocken": 60,
-      "Kakaopulver": 20,
-      "Wasser": 200,
-      "Zucker": 8
-    },
     "ingredient_details": [
-      {
-        "name": "Magermilch",
-        "amount": 250,
-        "unit": "ml"
-      },
-      {
-        "name": "Haferflocken",
-        "amount": 60,
-        "unit": "g"
-      },
-      {
-        "name": "Kakaopulver",
-        "amount": 20,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 200,
-        "unit": "ml"
-      },
-      {
-        "name": "Zucker",
-        "amount": 8,
-        "unit": "g"
-      }
+      { "name": "Magermilch (max. 1 % Fett)", "amount": 1, "unit": "Glas (250 ml)" },
+      { "name": "Instant-Kakaopulver", "amount": 2, "unit": "EL" },
+      { "name": "Hafermark", "amount": 6, "unit": "EL" },
+      { "name": "Vanillezucker", "amount": 1, "unit": "Packerl" }
     ],
-    "instructions": ""
+    "instructions": "Alle Zutaten mixen."
   },
   {
     "id": "birnen-jogurt-shake",
     "dish_name": "Birnen-Jogurt Shake",
     "category": "Shakes",
     "servings": 1,
-    "ingredients": {
-      "Joghurt": 180,
-      "Birnensaft": 100,
-      "Haferflocken": 70,
-      "Wasser": 200,
-      "Honig": 15,
-      "Zimt": 4
-    },
     "ingredient_details": [
-      {
-        "name": "Joghurt",
-        "amount": 180,
-        "unit": "g"
-      },
-      {
-        "name": "Birnensaft",
-        "amount": 100,
-        "unit": "ml"
-      },
-      {
-        "name": "Haferflocken",
-        "amount": 70,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 200,
-        "unit": "ml"
-      },
-      {
-        "name": "Honig",
-        "amount": 15,
-        "unit": "g"
-      },
-      {
-        "name": "Zimt",
-        "amount": 4,
-        "unit": "g"
-      }
+      { "name": "Jogurt natur fettarm", "amount": 1, "unit": "kl. Becher" },
+      { "name": "Birnensaft (100 % Fruchtsaft)", "amount": 0.5, "unit": "Glas (100 ml)" },
+      { "name": "Hafermark", "amount": 7, "unit": "EL" },
+      { "name": "Honig", "amount": 1, "unit": "EL" },
+      { "name": "Zimt gemahlen", "amount": 1, "unit": "Prise" }
     ],
-    "instructions": ""
+    "instructions": "Alle Zutaten mixen."
   },
   {
     "id": "tunfischaufstrich",
     "dish_name": "Tunfischaufstrich",
     "category": "Aufstriche & Salate",
     "servings": 10,
-    "ingredients": {
-      "Thunfisch, roh": 150,
-      "Frischkäse, Doppelrahm": 250,
-      "Gurke": 40,
-      "Schnittlauch, roh": 10,
-      "Wasser": 2000,
-      "Rapsöl": 5,
-      "Senf": 5,
-      "Salz": 2.5,
-      "Pfeffer": 40
-    },
     "ingredient_details": [
-      {
-        "name": "Thunfisch, roh",
-        "amount": 150,
-        "unit": "g"
-      },
-      {
-        "name": "Frischkäse, Doppelrahm",
-        "amount": 250,
-        "unit": "g"
-      },
-      {
-        "name": "Gurke",
-        "amount": 40,
-        "unit": "g"
-      },
-      {
-        "name": "Schnittlauch, roh",
-        "amount": 10,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 2000,
-        "unit": "ml"
-      },
-      {
-        "name": "Rapsöl",
-        "amount": 5,
-        "unit": "ml"
-      },
-      {
-        "name": "Senf",
-        "amount": 5,
-        "unit": "g"
-      },
-      {
-        "name": "Salz",
-        "amount": 2.5,
-        "unit": "g"
-      },
-      {
-        "name": "Pfeffer",
-        "amount": 40,
-        "unit": "g"
-      }
+      { "name": "Tunfisch in Salzlake", "amount": 1, "unit": "Dose" },
+      { "name": "Frischkäse light", "amount": 250, "unit": "g" },
+      { "name": "Rapsöl", "amount": 1, "unit": "TL" },
+      { "name": "Essiggurken", "amount": 2, "unit": "Stk." },
+      { "name": "Schnittlauch", "amount": 2, "unit": "EL" },
+      { "name": "Estragonsenf", "amount": 1, "unit": "TL" },
+      { "name": "Salz", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Pfeffer", "amount": null, "unit": "nach Geschmack" }
     ],
-    "instructions": ""
+    "instructions": "Tunfisch abtropfen lassen. Alle Zutaten vermischen und zu einem cremigen Aufstrich verrühren."
   },
   {
     "id": "schinkenaufstrich",
     "dish_name": "Schinkenaufstrich",
     "category": "Aufstriche & Salate",
     "servings": 10,
-    "ingredients": {
-      "Hüttenkäse, nature": 250,
-      "Hinterschinken": 100,
-      "Ei": 100,
-      "Gurke": 40,
-      "Wasser": 2000,
-      "Paprika": 40
-    },
     "ingredient_details": [
-      {
-        "name": "Hüttenkäse, nature",
-        "amount": 250,
-        "unit": "g"
-      },
-      {
-        "name": "Hinterschinken",
-        "amount": 100,
-        "unit": "g"
-      },
-      {
-        "name": "Ei",
-        "amount": 100,
-        "unit": "g"
-      },
-      {
-        "name": "Gurke",
-        "amount": 40,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 2000,
-        "unit": "ml"
-      },
-      {
-        "name": "Paprika",
-        "amount": 40,
-        "unit": "g"
-      }
+      { "name": "Magertopfen", "amount": 250, "unit": "g" },
+      { "name": "Magerer Schinken gekocht", "amount": 100, "unit": "g" },
+      { "name": "Harte Eier", "amount": 2, "unit": "Stk." },
+      { "name": "Paprikapulver edelsüß", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Gewürzgurken", "amount": 2, "unit": "Stk." }
     ],
-    "instructions": ""
+    "instructions": "Schinken, Eier und Gurken zerkleinern. Alle Zutaten mit dem Pürierstab zu einer feinen Creme pürieren. Falls kein Pürierstab vorhanden ist, die festen Zutaten sehr fein hacken und mit dem Topfen vermengen."
   },
   {
     "id": "dilltopfen",
     "dish_name": "Dilltopfen",
     "category": "Aufstriche & Salate",
     "servings": 5,
-    "ingredients": {
-      "Hüttenkäse, nature": 250,
-      "Dill": 15,
-      "Wasser": 1000,
-      "Rapsöl": 10,
-      "Salz": 1.25
-    },
     "ingredient_details": [
-      {
-        "name": "Hüttenkäse, nature",
-        "amount": 250,
-        "unit": "g"
-      },
-      {
-        "name": "Dill",
-        "amount": 15,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 1000,
-        "unit": "ml"
-      },
-      {
-        "name": "Rapsöl",
-        "amount": 10,
-        "unit": "ml"
-      },
-      {
-        "name": "Salz",
-        "amount": 1.25,
-        "unit": "g"
-      }
+      { "name": "Magertopfen", "amount": 250, "unit": "g" },
+      { "name": "Rapsöl", "amount": 1, "unit": "EL" },
+      { "name": "Dille", "amount": 3, "unit": "EL" },
+      { "name": "Salz", "amount": null, "unit": "nach Geschmack" }
     ],
-    "instructions": ""
+    "instructions": "Alle Zutaten gründlich vermischen. Kann auch als Butterersatz unter Schinken oder Magerkäse verwendet werden."
   },
   {
     "id": "kartoffelkaese",
     "dish_name": "Kartoffelkäse",
     "category": "Aufstriche & Salate",
     "servings": 4,
-    "ingredients": {
-      "Kartoffel": 350,
-      "Sauerrahm": 300,
-      "Joghurt": 300,
-      "Zwiebel": 80,
-      "Paprika": 40,
-      "Wasser": 800,
-      "Salz": 1.0
-    },
     "ingredient_details": [
-      {
-        "name": "Kartoffel",
-        "amount": 350,
-        "unit": "g"
-      },
-      {
-        "name": "Sauerrahm",
-        "amount": 300,
-        "unit": "g"
-      },
-      {
-        "name": "Joghurt",
-        "amount": 300,
-        "unit": "g"
-      },
-      {
-        "name": "Zwiebel",
-        "amount": 80,
-        "unit": "g"
-      },
-      {
-        "name": "Paprika",
-        "amount": 40,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 800,
-        "unit": "ml"
-      },
-      {
-        "name": "Salz",
-        "amount": 1.0,
-        "unit": "g"
-      }
+      { "name": "Erdäpfel", "amount": 350, "unit": "g" },
+      { "name": "Sauerrahm", "amount": 0.5, "unit": "Becher" },
+      { "name": "Jogurt", "amount": 0.5, "unit": "Becher" },
+      { "name": "Rote Zwiebeln", "amount": 80, "unit": "g" },
+      { "name": "Paprika", "amount": 40, "unit": "g" },
+      { "name": "Salz", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Pfeffer", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Schnittlauch", "amount": null, "unit": "nach Geschmack" }
     ],
-    "instructions": ""
+    "instructions": "Erdäpfel waschen, kochen, schälen und durch eine Erdäpfelpresse drücken. Auskühlen lassen. Zwiebeln fein hacken und Paprika würfelig schneiden. Mit Sauerrahm, Jogurt, Zwiebeln, Paprika und den Gewürzen vermischen und abschmecken. Mit frischem Schnittlauch bestreuen."
   },
   {
     "id": "tunfischsalat",
     "dish_name": "Tunfischsalat",
     "category": "Aufstriche & Salate",
     "servings": 1,
-    "ingredients": {
-      "Thunfisch, roh": 150,
-      "Radicchio, raw": 50,
-      "Gurke": 50,
-      "Paprika": 200,
-      "Zwiebel": 120,
-      "Tomate": 120,
-      "Oliven": 15,
-      "Wasser": 200,
-      "Rapsöl": 10,
-      "Essig": 4,
-      "Senf": 4,
-      "Knoblauch": 4,
-      "Pfeffer": 4,
-      "Salz": 0.25
-    },
     "ingredient_details": [
-      {
-        "name": "Thunfisch, roh",
-        "amount": 150,
-        "unit": "g"
-      },
-      {
-        "name": "Radicchio, raw",
-        "amount": 50,
-        "unit": "g"
-      },
-      {
-        "name": "Gurke",
-        "amount": 50,
-        "unit": "g"
-      },
-      {
-        "name": "Paprika",
-        "amount": 200,
-        "unit": "g"
-      },
-      {
-        "name": "Zwiebel",
-        "amount": 120,
-        "unit": "g"
-      },
-      {
-        "name": "Tomate",
-        "amount": 120,
-        "unit": "g"
-      },
-      {
-        "name": "Oliven",
-        "amount": 15,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 200,
-        "unit": "ml"
-      },
-      {
-        "name": "Rapsöl",
-        "amount": 10,
-        "unit": "ml"
-      },
-      {
-        "name": "Essig",
-        "amount": 4,
-        "unit": "ml"
-      },
-      {
-        "name": "Senf",
-        "amount": 4,
-        "unit": "g"
-      },
-      {
-        "name": "Knoblauch",
-        "amount": 4,
-        "unit": "g"
-      },
-      {
-        "name": "Pfeffer",
-        "amount": 4,
-        "unit": "g"
-      },
-      {
-        "name": "Salz",
-        "amount": 0.25,
-        "unit": "g"
-      }
+      { "name": "Tunfisch aus der Dose", "amount": 150, "unit": "g" },
+      { "name": "Radicciosalat", "amount": 50, "unit": "g" },
+      { "name": "Roter Paprika", "amount": 1, "unit": "Stk." },
+      { "name": "Grüner Paprika", "amount": 1, "unit": "Stk." },
+      { "name": "Zwiebel", "amount": 0.5, "unit": "Stk." },
+      { "name": "Salatgurke", "amount": 50, "unit": "g" },
+      { "name": "Pflanzenöl", "amount": 1, "unit": "EL" },
+      { "name": "Essig", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Senf", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Knoblauch", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Pfeffer", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Salz", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Schwarze Oliven", "amount": 4, "unit": "Stk." },
+      { "name": "Tomate", "amount": 1, "unit": "Stk." }
     ],
-    "instructions": ""
+    "instructions": "Gemüse waschen. Radiccio zerpflücken, Paprika und Zwiebeln in Streifen und die Gurke in Scheiben schneiden. Alle Zutaten vermengen. Aus Essig, Öl, Senf und den Gewürzen eine Marinade bereiten und über den Salat gießen. Mit Oliven und Tomatenvierteln garnieren."
+  },
+  {
+    "id": "nudelsalat-mit-raeuchertofu",
+    "dish_name": "Nudelsalat mit Räuchertofu",
+    "category": "Aufstriche & Salate",
+    "servings": 2,
+    "ingredient_details": [
+      { "name": "Nudeln", "amount": 200, "unit": "g" },
+      { "name": "Erbsen", "amount": 0.5, "unit": "Dose" },
+      { "name": "Tomate, entkernt und gewürfelt", "amount": 1, "unit": "Stk." },
+      { "name": "Zwiebel, gewürfelt", "amount": 0.5, "unit": "Stk." },
+      { "name": "Essiggurke, gewürfelt", "amount": 1, "unit": "Stk." },
+      { "name": "Räuchertofu", "amount": 100, "unit": "g" },
+      { "name": "Mais", "amount": 0.5, "unit": "kleine Dose" },
+      { "name": "Sauerrahm", "amount": 3, "unit": "EL" },
+      { "name": "Jogurt", "amount": 2, "unit": "EL" },
+      { "name": "Tomaten-Ketchup", "amount": 1, "unit": "EL" },
+      { "name": "Knoblauch", "amount": 1, "unit": "Zehe" },
+      { "name": "Petersilie", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Schnittlauch", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Salz", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Pfeffer", "amount": null, "unit": "nach Geschmack" }
+    ],
+    "instructions": "Die Nudeln in Salzwasser bissfest garen. Mit Erbsen, Tomaten, Zwiebel, Essiggurke, Räuchertofu und Mais verrühren. Sauerrahm mit Jogurt und Ketchup verrühren und mit Knoblauch, Petersilie, Schnittlauch, Salz und Pfeffer abschmecken. Über den Salat gießen und gut durchziehen lassen."
   },
   {
     "id": "hering-apfel-salat",
     "dish_name": "Hering-Apfel-Salat",
     "category": "Aufstriche & Salate",
     "servings": 2,
-    "ingredients": {
-      "Atlantic herring": 150,
-      "Apfel": 100,
-      "Gurke": 50,
-      "Hüttenkäse, nature": 50,
-      "Buttermilch": 70,
-      "Zwiebel": 25,
-      "Wasser": 400,
-      "Dill": 8,
-      "Salz": 0.5,
-      "Pfeffer": 8,
-      "Essig": 8,
-      "Worcestershire sauce": 8
-    },
     "ingredient_details": [
-      {
-        "name": "Atlantic herring",
-        "amount": 150,
-        "unit": "g"
-      },
-      {
-        "name": "Apfel",
-        "amount": 100,
-        "unit": "g"
-      },
-      {
-        "name": "Gurke",
-        "amount": 50,
-        "unit": "g"
-      },
-      {
-        "name": "Hüttenkäse, nature",
-        "amount": 50,
-        "unit": "g"
-      },
-      {
-        "name": "Buttermilch",
-        "amount": 70,
-        "unit": "ml"
-      },
-      {
-        "name": "Zwiebel",
-        "amount": 25,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 400,
-        "unit": "ml"
-      },
-      {
-        "name": "Dill",
-        "amount": 8,
-        "unit": "g"
-      },
-      {
-        "name": "Salz",
-        "amount": 0.5,
-        "unit": "g"
-      },
-      {
-        "name": "Pfeffer",
-        "amount": 8,
-        "unit": "g"
-      },
-      {
-        "name": "Essig",
-        "amount": 8,
-        "unit": "ml"
-      },
-      {
-        "name": "Worcestershire sauce",
-        "amount": 8,
-        "unit": "ml"
-      }
+      { "name": "Hering (mariniert)", "amount": 150, "unit": "g" },
+      { "name": "Magertopfen", "amount": 50, "unit": "g" },
+      { "name": "Buttermilch", "amount": 70, "unit": "ml" },
+      { "name": "Apfel", "amount": 100, "unit": "g" },
+      { "name": "Dill", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Salz", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Worcestersoße", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Essig", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Pfeffer", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Zwiebel", "amount": 25, "unit": "g" },
+      { "name": "Gurke oder Zucchini", "amount": 50, "unit": "g" }
     ],
-    "instructions": ""
+    "instructions": "Topfen und Buttermilch verrühren, würzen und anschließend mit den restlichen Zutaten vermischen."
   },
   {
     "id": "karottencremesuppe",
     "dish_name": "Karottencremesuppe",
-    "category": "Suppen & Nudelgerichte",
+    "category": "Suppen",
     "servings": 1,
-    "ingredients": {
-      "Karotte": 100,
-      "Gemüsebouillon": 200,
-      "Wasser": 200,
-      "Vollmilch, UHT": 60,
-      "Joghurt": 15,
-      "Petersilie": 4,
-      "Salz": 0.25
-    },
     "ingredient_details": [
-      {
-        "name": "Karotte",
-        "amount": 100,
-        "unit": "g"
-      },
-      {
-        "name": "Gemüsebouillon",
-        "amount": 200,
-        "unit": "ml"
-      },
-      {
-        "name": "Wasser",
-        "amount": 200,
-        "unit": "ml"
-      },
-      {
-        "name": "Vollmilch, UHT",
-        "amount": 60,
-        "unit": "ml"
-      },
-      {
-        "name": "Joghurt",
-        "amount": 15,
-        "unit": "g"
-      },
-      {
-        "name": "Petersilie",
-        "amount": 4,
-        "unit": "g"
-      },
-      {
-        "name": "Salz",
-        "amount": 0.25,
-        "unit": "g"
-      }
+      { "name": "Karotten", "amount": 100, "unit": "g" },
+      { "name": "Gemüsesuppe", "amount": 200, "unit": "ml" },
+      { "name": "Vollmilch", "amount": 60, "unit": "ml" },
+      { "name": "Jogurt", "amount": 1, "unit": "EL" },
+      { "name": "Petersilie", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Salz", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Kräuter", "amount": null, "unit": "nach Geschmack" }
     ],
-    "instructions": ""
+    "instructions": "Karotten klein schneiden und in der Gemüsesuppe weich dünsten. Milch und Jogurt dazugeben. Alles mit dem Pürierstab fein pürieren. Mit Salz und Kräutern abschmecken."
   },
   {
     "id": "zucchinicremesuppe",
     "dish_name": "Zucchinicremesuppe",
-    "category": "Suppen & Nudelgerichte",
+    "category": "Suppen",
     "servings": 1,
-    "ingredients": {
-      "Green zucchini": 180,
-      "Kartoffel": 80,
-      "Zwiebel": 120,
-      "Knoblauch": 3,
-      "Wasser": 350,
-      "Rapsöl": 5,
-      "Essig": 5,
-      "Dill": 4,
-      "Salz": 0.25,
-      "Pfeffer": 4
-    },
     "ingredient_details": [
-      {
-        "name": "Green zucchini",
-        "amount": 180,
-        "unit": "g"
-      },
-      {
-        "name": "Kartoffel",
-        "amount": 80,
-        "unit": "g"
-      },
-      {
-        "name": "Zwiebel",
-        "amount": 120,
-        "unit": "g"
-      },
-      {
-        "name": "Knoblauch",
-        "amount": 3,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 350,
-        "unit": "ml"
-      },
-      {
-        "name": "Rapsöl",
-        "amount": 5,
-        "unit": "ml"
-      },
-      {
-        "name": "Essig",
-        "amount": 5,
-        "unit": "ml"
-      },
-      {
-        "name": "Dill",
-        "amount": 4,
-        "unit": "g"
-      },
-      {
-        "name": "Salz",
-        "amount": 0.25,
-        "unit": "g"
-      },
-      {
-        "name": "Pfeffer",
-        "amount": 4,
-        "unit": "g"
-      }
+      { "name": "Zucchini", "amount": 1, "unit": "Stk." },
+      { "name": "Zwiebel", "amount": 0.5, "unit": "Stk." },
+      { "name": "Knoblauchzehe", "amount": 1, "unit": "Stk." },
+      { "name": "Salz", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Pfeffer", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Öl", "amount": 1, "unit": "TL" },
+      { "name": "Wasser", "amount": 350, "unit": "ml" },
+      { "name": "Essig", "amount": 1, "unit": "TL" },
+      { "name": "Kartoffel", "amount": 1, "unit": "kleine Stk." },
+      { "name": "Dill", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Estragon", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Liebstöckel", "amount": null, "unit": "nach Geschmack" }
     ],
-    "instructions": ""
+    "instructions": "Zwiebel und Knoblauch fein würfeln und im Öl anschwitzen. Zucchini kleinwürfelig schneiden, zugeben und durchrösten. Mit Wasser aufgießen, würzen und eine rohe, geriebene Kartoffel dazugeben. Die Suppe mit dem Mixstab pürieren und nochmals gut durchkochen lassen. Mit Essig, Salz, Pfeffer und Kräutern würzen. Die Suppe kann mit einem Löffel Sauerrahm verfeinert werden, danach jedoch nicht mehr aufkochen. Alternativ können statt Zucchini auch Brokkoli, Karotten, Karfiol, Erbsen oder Gurken verwendet werden. Falls die Suppe zu dünn ist, eine weitere geriebene Kartoffel oder 1–2 EL Haferflocken mitkochen."
   },
   {
     "id": "gemueseauflauf-mit-penne",
     "dish_name": "Gemüseauflauf mit Penne",
-    "category": "Suppen & Nudelgerichte",
+    "category": "Nudelgerichte",
     "servings": 4,
-    "ingredients": {
-      "Teigwaren": 300,
-      "Green zucchini": 200,
-      "Karotte": 200,
-      "Spargel": 200,
-      "Paprika": 120,
-      "Sonnenblumenöl": 30,
-      "Butter": 30,
-      "Mehl": 25,
-      "Milch": 450,
-      "Wasser": 800,
-      "Parmesan Cheese": 30,
-      "Salz": 1.0,
-      "Pfeffer": 16
-    },
     "ingredient_details": [
-      {
-        "name": "Teigwaren",
-        "amount": 300,
-        "unit": "g"
-      },
-      {
-        "name": "Green zucchini",
-        "amount": 200,
-        "unit": "g"
-      },
-      {
-        "name": "Karotte",
-        "amount": 200,
-        "unit": "g"
-      },
-      {
-        "name": "Spargel",
-        "amount": 200,
-        "unit": "g"
-      },
-      {
-        "name": "Paprika",
-        "amount": 120,
-        "unit": "g"
-      },
-      {
-        "name": "Sonnenblumenöl",
-        "amount": 30,
-        "unit": "ml"
-      },
-      {
-        "name": "Butter",
-        "amount": 30,
-        "unit": "g"
-      },
-      {
-        "name": "Mehl",
-        "amount": 25,
-        "unit": "g"
-      },
-      {
-        "name": "Milch",
-        "amount": 450,
-        "unit": "ml"
-      },
-      {
-        "name": "Wasser",
-        "amount": 800,
-        "unit": "ml"
-      },
-      {
-        "name": "Parmesan Cheese",
-        "amount": 30,
-        "unit": "g"
-      },
-      {
-        "name": "Salz",
-        "amount": 1.0,
-        "unit": "g"
-      },
-      {
-        "name": "Pfeffer",
-        "amount": 16,
-        "unit": "g"
-      }
+      { "name": "Penne", "amount": 300, "unit": "g" },
+      { "name": "Zucchini", "amount": 200, "unit": "g" },
+      { "name": "Karotten", "amount": 200, "unit": "g" },
+      { "name": "Spargelspitzen", "amount": 200, "unit": "g" },
+      { "name": "Paprikaschote", "amount": 1, "unit": "Stk." },
+      { "name": "Sonnenblumenöl", "amount": 30, "unit": "g" },
+      { "name": "Butter", "amount": 5, "unit": "g" },
+      { "name": "Parmesan", "amount": 3, "unit": "EL" },
+      { "name": "Butter", "amount": 25, "unit": "g" },
+      { "name": "Mehl oder Vollkornmehl", "amount": 25, "unit": "g" },
+      { "name": "Milch", "amount": 0.5, "unit": "l (knapp)" },
+      { "name": "Salz", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Pfeffer", "amount": null, "unit": "nach Geschmack" }
     ],
-    "instructions": ""
+    "instructions": "Gemüse putzen, waschen und in breite Streifen schneiden. Karotten und Paprikastreifen in der Pfanne in Öl anrösten (ca. 1 Minute), wenig Wasser dazugeben und ca. 15 Minuten köcheln lassen. Nach der halben Kochzeit Spargelspitzen und Zucchini hinzufügen und öfters umrühren. In der Zwischenzeit die Béchamelsauce zubereiten: Butter zerlassen, Mehl darin anrösten, mit Milch aufgießen und dabei gut umrühren, anschließend mit Salz und Pfeffer abschmecken. Nudeln kochen. Die Hälfte des Gemüses in eine bebutterte, feuerfeste Form geben, danach die Nudeln mit der anderen Hälfte des Gemüses einschichten. Mit Béchamelsauce bedecken und Parmesan darüberstreuen. Im vorgeheizten Rohr bei 190 °C etwa 15 Minuten überbacken."
   },
   {
     "id": "spaghetti-mit-tomatensosse",
     "dish_name": "Spaghetti mit Tomatensoße",
-    "category": "Suppen & Nudelgerichte",
+    "category": "Nudelgerichte",
     "servings": 1,
-    "ingredients": {
-      "Teigwaren": 120,
-      "Tomate": 200,
-      "Wasser": 200,
-      "Parmesan Cheese": 20,
-      "Olivenöl": 5,
-      "Basil": 4,
-      "Salz": 0.25
-    },
     "ingredient_details": [
-      {
-        "name": "Teigwaren",
-        "amount": 120,
-        "unit": "g"
-      },
-      {
-        "name": "Tomate",
-        "amount": 200,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 200,
-        "unit": "ml"
-      },
-      {
-        "name": "Parmesan Cheese",
-        "amount": 20,
-        "unit": "g"
-      },
-      {
-        "name": "Olivenöl",
-        "amount": 5,
-        "unit": "ml"
-      },
-      {
-        "name": "Basil",
-        "amount": 4,
-        "unit": "g"
-      },
-      {
-        "name": "Salz",
-        "amount": 0.25,
-        "unit": "g"
-      }
+      { "name": "Spaghetti", "amount": 120, "unit": "g" },
+      { "name": "Geschälte Tomaten aus der Dose oder Tomatenpolpa", "amount": 200, "unit": "g (1 Häferl)" },
+      { "name": "Olivenöl", "amount": 1, "unit": "TL" },
+      { "name": "Salz", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Italienische Kräuter (Basilikum, Oregano)", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Parmesan, gerieben", "amount": 2, "unit": "EL" }
     ],
-    "instructions": ""
-  },
-  {
-    "id": "makkaroni-mit-ricottasosse",
-    "dish_name": "Makkaroni mit Ricottasoße",
-    "category": "Suppen & Nudelgerichte",
-    "servings": 2,
-    "ingredients": {
-      "Macaroni": 400,
-      "Ricotta Cheese": 250,
-      "Wasser": 400,
-      "Pesto, red": 15
-    },
-    "ingredient_details": [
-      {
-        "name": "Macaroni",
-        "amount": 400,
-        "unit": "g"
-      },
-      {
-        "name": "Ricotta Cheese",
-        "amount": 250,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 400,
-        "unit": "ml"
-      },
-      {
-        "name": "Pesto, red",
-        "amount": 15,
-        "unit": "g"
-      }
-    ],
-    "instructions": ""
+    "instructions": "Salzwasser zum Kochen bringen. Die Spaghetti erst hinzugeben, wenn das Wasser sprudelt, und etwa 7 Minuten kochen. Tomaten zerkleinern und in einem kleinen Topf aufkochen. Olivenöl, Salz und Kräuter dazugeben und abschmecken. Falls die Tomaten sehr sauer schmecken, eine Messerspitze Zucker hinzufügen. Spaghetti abseihen und mit der Tomatensoße vermengen. Auf einem Teller anrichten und mit Parmesan bestreuen. Tipp: Drei Stunden vor dem Training keinen Knoblauch oder Zwiebel verwenden."
   },
   {
     "id": "gemuese-lasagne",
     "dish_name": "Gemüse-Lasagne",
-    "category": "Suppen & Nudelgerichte",
+    "category": "Nudelgerichte",
     "servings": 2,
-    "ingredients": {
-      "Teigwaren": 40,
-      "Spinat": 40,
-      "Aubergine": 40,
-      "Tomate": 60,
-      "Hüttenkäse, nature": 40,
-      "Schmelzkäse": 20,
-      "Tomatensauce": 180,
-      "Magermilch": 100,
-      "Wasser": 400,
-      "Dinkelmehl, Vollkorn": 5,
-      "Margarine": 5,
-      "Parmesan Cheese": 5,
-      "Salz": 0.5,
-      "Pfeffer": 8
-    },
     "ingredient_details": [
-      {
-        "name": "Teigwaren",
-        "amount": 40,
-        "unit": "g"
-      },
-      {
-        "name": "Spinat",
-        "amount": 40,
-        "unit": "g"
-      },
-      {
-        "name": "Aubergine",
-        "amount": 40,
-        "unit": "g"
-      },
-      {
-        "name": "Tomate",
-        "amount": 60,
-        "unit": "g"
-      },
-      {
-        "name": "Hüttenkäse, nature",
-        "amount": 40,
-        "unit": "g"
-      },
-      {
-        "name": "Schmelzkäse",
-        "amount": 20,
-        "unit": "g"
-      },
-      {
-        "name": "Tomatensauce",
-        "amount": 180,
-        "unit": "ml"
-      },
-      {
-        "name": "Magermilch",
-        "amount": 100,
-        "unit": "ml"
-      },
-      {
-        "name": "Wasser",
-        "amount": 400,
-        "unit": "ml"
-      },
-      {
-        "name": "Dinkelmehl, Vollkorn",
-        "amount": 5,
-        "unit": "g"
-      },
-      {
-        "name": "Margarine",
-        "amount": 5,
-        "unit": "g"
-      },
-      {
-        "name": "Parmesan Cheese",
-        "amount": 5,
-        "unit": "g"
-      },
-      {
-        "name": "Salz",
-        "amount": 0.5,
-        "unit": "g"
-      },
-      {
-        "name": "Pfeffer",
-        "amount": 8,
-        "unit": "g"
-      }
+      { "name": "Lasagneblätter", "amount": 40, "unit": "g" },
+      { "name": "Spinat", "amount": 40, "unit": "g" },
+      { "name": "Aubergine oder Zucchini", "amount": 40, "unit": "g" },
+      { "name": "Tomate", "amount": 0.5, "unit": "Stk." },
+      { "name": "Hüttenkäse", "amount": 40, "unit": "g" },
+      { "name": "Tomaten-Basilikum-Sugo", "amount": 0.5, "unit": "Glas" },
+      { "name": "Parmesan, gerieben", "amount": 1, "unit": "TL" },
+      { "name": "Margarine", "amount": 1, "unit": "TL" },
+      { "name": "Weizenvollkornmehl", "amount": 1, "unit": "TL" },
+      { "name": "Magermilch", "amount": 100, "unit": "ml" },
+      { "name": "Schmelzkäse", "amount": 20, "unit": "g" },
+      { "name": "Salz", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Pfeffer", "amount": null, "unit": "nach Geschmack" }
     ],
-    "instructions": ""
+    "instructions": "Für die Käsesoße Margarine und Mehl zu einer Einmach verarbeiten. Vom Herd nehmen und nach und nach die Milch einrühren. Käse, Salz und Pfeffer dazugeben und rühren, bis die Soße dick wird. Spinat in Salzwasser garen, abtropfen lassen und hacken. Eine feuerfeste Form mit Lasagneblättern auslegen. Abwechselnd Tomatensugo, Tomatenscheiben, Auberginen oder Zucchini, Spinat, Hüttenkäse, Käsesoße und Lasagneblätter schichten. Die letzte Schicht mit Sugo bestreichen und mit Parmesan bestreuen. Im Ofen bei 180 °C etwa 30 Minuten backen."
+  },
+  {
+    "id": "makkaroni-mit-ricottasosse",
+    "dish_name": "Makkaroni mit Ricottasoße",
+    "category": "Nudelgerichte",
+    "servings": 2,
+    "ingredient_details": [
+      { "name": "Makkaroni", "amount": 400, "unit": "g" },
+      { "name": "Ricotta-Käse fettarm", "amount": 1, "unit": "Packung" },
+      { "name": "Pesto", "amount": 1, "unit": "EL" }
+    ],
+    "instructions": "Makkaroni bissfest kochen. Ricotta-Käse zerkleinern und mit 4 EL Nudelkochwasser erhitzen. Pesto dazugeben. Mit den abgetropften Makkaroni vermischen und servieren."
   },
   {
     "id": "tortilla-wrap-mit-putenfleisch-und-kaese",
     "dish_name": "Tortilla Wrap mit Putenfleisch und Käse",
-    "category": "Hauptgerichte",
+    "category": "Gerichte mit Fleisch",
     "servings": 1,
-    "ingredients": {
-      "Tortilla": 80,
-      "Turkey": 100,
-      "Gouda": 60,
-      "Zwiebel": 25,
-      "Paprika": 120,
-      "Tomatenpüree": 15,
-      "Wasser": 200,
-      "Olivenöl": 7,
-      "Chili": 3
-    },
     "ingredient_details": [
-      {
-        "name": "Tortilla",
-        "amount": 80,
-        "unit": "g"
-      },
-      {
-        "name": "Turkey",
-        "amount": 100,
-        "unit": "g"
-      },
-      {
-        "name": "Gouda",
-        "amount": 60,
-        "unit": "g"
-      },
-      {
-        "name": "Zwiebel",
-        "amount": 25,
-        "unit": "g"
-      },
-      {
-        "name": "Paprika",
-        "amount": 120,
-        "unit": "g"
-      },
-      {
-        "name": "Tomatenpüree",
-        "amount": 15,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 200,
-        "unit": "ml"
-      },
-      {
-        "name": "Olivenöl",
-        "amount": 7,
-        "unit": "ml"
-      },
-      {
-        "name": "Chili",
-        "amount": 3,
-        "unit": "g"
-      }
+      { "name": "Tortillas", "amount": "1-2", "unit": "Stk." },
+      { "name": "Putenbrust", "amount": 100, "unit": "g" },
+      { "name": "Jungzwiebel", "amount": 1, "unit": "Stange" },
+      { "name": "Chili con Carne-Gewürzmischung", "amount": 1, "unit": "TL" },
+      { "name": "Tomatenmark", "amount": 1, "unit": "EL" },
+      { "name": "Grüner Paprika", "amount": 1, "unit": "Stk." },
+      { "name": "Olivenöl", "amount": 1, "unit": "großzügiger EL" },
+      { "name": "Geriebener Käse (max. 16 % Fett bzw. 35 % F.i.T.)", "amount": 6, "unit": "EL" }
     ],
-    "instructions": ""
+    "instructions": "Olivenöl in die Pfanne geben, Zwiebel und Gewürzmischung rasch beifügen und die Hitze reduzieren. Die Zwiebel langsam ausbraten, sie soll nicht zu dunkel werden. Die Zwiebel beiseite schieben, Kreuzkümmel etwa 30 Sekunden anrösten und mit der Zwiebel vermengen. Fleisch hinzufügen, salzen und gut anrösten. Tomatenmark dazugeben und abschmecken, bei Bedarf Knoblauchgranulat verwenden. Zum Schluss den Paprika zugeben, nur kurz anbraten und von der Flamme nehmen. Etwa 2 gehäufte EL der Fülle auf die Mitte des Wraps geben und mit etwa 2 EL Käse bestreuen. Die Seiten einschlagen und den Wrap fest einrollen. Für bessere Verträglichkeit im Sandwich-Toaster ohne zusätzliches Fett etwa 5 Minuten knusprig toasten."
+  },
+  {
+    "id": "putenschnitzel-hawaii",
+    "dish_name": "Putenschnitzel Hawaii",
+    "category": "Gerichte mit Fleisch",
+    "servings": 1,
+    "ingredient_details": [
+      { "name": "Putenschnitzel", "amount": 1, "unit": "Stk. (150 g)" },
+      { "name": "Hochwertiges Öl", "amount": 1, "unit": "TL" },
+      { "name": "Zwiebel", "amount": 0.5, "unit": "kleine Stk." },
+      { "name": "Apfel", "amount": 0.5, "unit": "kleine Stk." },
+      { "name": "Magermilch", "amount": 2, "unit": "EL" },
+      { "name": "Ananassaft", "amount": "1-2", "unit": "EL" },
+      { "name": "Ananas", "amount": 1, "unit": "Scheibe" },
+      { "name": "Salz", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Pfeffer", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Curry", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Gemüsesuppenwürfel", "amount": null, "unit": "optional" }
+    ],
+    "instructions": "Putenschnitzel würzen und in einer beschichteten Pfanne im heißen Öl beidseitig anbraten. Herausnehmen und warm stellen. Gehackte Zwiebel und klein gewürfelte Äpfel im Bratenrückstand anbraten. Mit Magermilch und etwas Wasser aufgießen. Curry und weitere Gewürze zugeben und abschmecken. Ananassaft hinzufügen und die Soße leicht eindicken lassen. Falls nötig mit etwas Mehl binden. Die Soße über das Putenschnitzel geben und mit einer Ananasscheibe belegen. Dazu passt Risipisi und grüner Salat."
   },
   {
     "id": "asiatische-huehnerbrust",
     "dish_name": "Asiatische Hühnerbrust",
-    "category": "Hauptgerichte",
+    "category": "Gerichte mit Fleisch",
     "servings": 1,
-    "ingredients": {
-      "Chicken": 120,
-      "Basmati Rice": 50,
-      "Paprika": 50,
-      "Bamboo shoot": 50,
-      "Erbse": 50,
-      "Sojasprossen, roh": 50,
-      "Wasser": 200,
-      "Sojasauce": 20,
-      "Rapsöl": 10,
-      "Curry Leaf": 4
-    },
     "ingredient_details": [
-      {
-        "name": "Chicken",
-        "amount": 120,
-        "unit": "g"
-      },
-      {
-        "name": "Basmati Rice",
-        "amount": 50,
-        "unit": "g"
-      },
-      {
-        "name": "Paprika",
-        "amount": 50,
-        "unit": "g"
-      },
-      {
-        "name": "Bamboo shoot",
-        "amount": 50,
-        "unit": "g"
-      },
-      {
-        "name": "Erbse",
-        "amount": 50,
-        "unit": "g"
-      },
-      {
-        "name": "Sojasprossen, roh",
-        "amount": 50,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 200,
-        "unit": "ml"
-      },
-      {
-        "name": "Sojasauce",
-        "amount": 20,
-        "unit": "ml"
-      },
-      {
-        "name": "Rapsöl",
-        "amount": 10,
-        "unit": "ml"
-      },
-      {
-        "name": "Curry Leaf",
-        "amount": 4,
-        "unit": "g"
-      }
+      { "name": "Hühnerbrust", "amount": 120, "unit": "g" },
+      { "name": "Paprika", "amount": 50, "unit": "g" },
+      { "name": "Bambussprossen", "amount": 50, "unit": "g" },
+      { "name": "Erbsen", "amount": 50, "unit": "g" },
+      { "name": "Sojasprossen", "amount": 50, "unit": "g" },
+      { "name": "Sojasoße", "amount": 2, "unit": "EL" },
+      { "name": "Chinasoße süß-scharf", "amount": null, "unit": "optional" },
+      { "name": "Öl", "amount": 2, "unit": "TL" },
+      { "name": "Basmatireis", "amount": 50, "unit": "g" },
+      { "name": "Curry", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Kurkuma", "amount": null, "unit": "nach Geschmack" },
+      { "name": "Paprika", "amount": null, "unit": "nach Geschmack" }
     ],
-    "instructions": ""
+    "instructions": "Die Hühnerbrust mit Salz, Chinasoße und Sojasoße marinieren. Anschließend in etwas Öl anbraten und mit wenig Wasser angießen. Zugedeckt langsam durchziehen lassen. Das Gemüse in Streifen schneiden, in etwas Öl erhitzen und mit Curry, Kurkuma und Paprikapulver abschmecken. Den Reis laut Packungsanleitung zubereiten und gemeinsam servieren."
   },
   {
     "id": "couscous-mit-gemuese",
-    "dish_name": "Couscous mit Gemüse",
-    "category": "Hauptgerichte",
+    "dish_name": "Cous Cous mit Gemüse",
+    "category": "Vegetarische Gerichte",
     "servings": 1,
-    "ingredients": {
-      "Couscous": 100,
-      "Aubergine": 250,
-      "Tomate": 300,
-      "Wasser": 200,
-      "Zitronensaft": 20,
-      "Petersilie": 4,
-      "Rosemary": 4,
-      "Salz": 0.25
-    },
     "ingredient_details": [
       {
-        "name": "Couscous",
+        "name": "Cous Cous (Instant)",
         "amount": 100,
         "unit": "g"
       },
       {
-        "name": "Aubergine",
+        "name": "Melanzani",
         "amount": 250,
         "unit": "g"
       },
       {
-        "name": "Tomate",
-        "amount": 300,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 200,
-        "unit": "ml"
-      },
-      {
-        "name": "Zitronensaft",
-        "amount": 20,
-        "unit": "ml"
-      },
-      {
-        "name": "Petersilie",
-        "amount": 4,
-        "unit": "g"
-      },
-      {
-        "name": "Rosemary",
-        "amount": 4,
-        "unit": "g"
+        "name": "Geschälte Tomaten",
+        "amount": 3,
+        "unit": "Stk."
       },
       {
         "name": "Salz",
-        "amount": 0.25,
-        "unit": "g"
+        "amount": null,
+        "unit": "nach Geschmack"
+      },
+      {
+        "name": "Vegetarische Suppenwürze",
+        "amount": null,
+        "unit": "optional"
+      },
+      {
+        "name": "Rosmarin",
+        "amount": null,
+        "unit": "nach Geschmack"
+      },
+      {
+        "name": "Frische Petersilie, gehackt",
+        "amount": null,
+        "unit": "nach Geschmack"
+      },
+      {
+        "name": "Frischer Zitronensaft",
+        "amount": 2,
+        "unit": "EL"
       }
     ],
-    "instructions": ""
+    "instructions": "Cous Cous laut Packungsanleitung zubereiten und beiseite stellen. Melanzani und Tomaten würfeln und in wenig Gemüsebrühe weich dünsten. Zum Schluss Melanzani und Tomaten hinzufügen, bis diese ebenfalls bissfest sind. Von der Flamme nehmen. Es sollte ein Sud entstanden sein, der den Boden bedeckt. Der Sud soll den Cous Cous saftig machen, zu viel Sud würde die Speise zu weich machen. Cous Cous und Gemüse vorsichtig vermengen und mit Kräutern, Zitronensaft und Sud abschmecken. Optional mit einer fettarmen Jogurtsauce servieren."
   },
   {
     "id": "vegetarisches-chili",
     "dish_name": "Vegetarisches Chili",
-    "category": "Hauptgerichte",
+    "category": "Vegetarische Gerichte",
     "servings": 1,
-    "ingredients": {
-      "Lentils": 100,
-      "Kidney Beans": 100,
-      "Mais": 50,
-      "Green zucchini": 100,
-      "Tomate": 100,
-      "Paprika": 180,
-      "Zwiebel": 60,
-      "Wasser": 200,
-      "Tomatenpüree": 15,
-      "Rapsöl": 10,
-      "Knoblauch": 4,
-      "Sojasauce": 4,
-      "Chili": 4,
-      "Salz": 0.25
-    },
     "ingredient_details": [
       {
-        "name": "Lentils",
+        "name": "Rote Linsen",
         "amount": 100,
         "unit": "g"
       },
       {
-        "name": "Kidney Beans",
-        "amount": 100,
-        "unit": "g"
+        "name": "Zwiebel",
+        "amount": 1,
+        "unit": "kleine Stk."
+      },
+      {
+        "name": "Tomate",
+        "amount": 1,
+        "unit": "Stk."
+      },
+      {
+        "name": "Zucchini",
+        "amount": 1,
+        "unit": "kleine Stk."
+      },
+      {
+        "name": "Roter Paprika",
+        "amount": 0.5,
+        "unit": "Stk."
+      },
+      {
+        "name": "Grüner Paprika",
+        "amount": 0.5,
+        "unit": "Stk."
+      },
+      {
+        "name": "Gelber Paprika",
+        "amount": 0.5,
+        "unit": "Stk."
+      },
+      {
+        "name": "Rapsöl",
+        "amount": 1,
+        "unit": "EL"
+      },
+      {
+        "name": "Tomatenmark",
+        "amount": 1,
+        "unit": "EL"
       },
       {
         "name": "Mais",
@@ -1477,315 +531,367 @@
         "unit": "g"
       },
       {
-        "name": "Green zucchini",
+        "name": "Rote Bohnen",
         "amount": 100,
         "unit": "g"
       },
       {
-        "name": "Tomate",
-        "amount": 100,
-        "unit": "g"
-      },
-      {
-        "name": "Paprika",
-        "amount": 180,
-        "unit": "g"
-      },
-      {
-        "name": "Zwiebel",
-        "amount": 60,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 200,
-        "unit": "ml"
-      },
-      {
-        "name": "Tomatenpüree",
-        "amount": 15,
-        "unit": "g"
-      },
-      {
-        "name": "Rapsöl",
-        "amount": 10,
-        "unit": "ml"
-      },
-      {
-        "name": "Knoblauch",
-        "amount": 4,
-        "unit": "g"
-      },
-      {
-        "name": "Sojasauce",
-        "amount": 4,
-        "unit": "ml"
+        "name": "Paprikapulver",
+        "amount": null,
+        "unit": "nach Geschmack"
       },
       {
         "name": "Chili",
-        "amount": 4,
-        "unit": "g"
+        "amount": null,
+        "unit": "nach Geschmack"
+      },
+      {
+        "name": "Worcestersoße",
+        "amount": null,
+        "unit": "nach Geschmack"
+      },
+      {
+        "name": "Sojasoße",
+        "amount": null,
+        "unit": "nach Geschmack"
+      },
+      {
+        "name": "Tabascosoße",
+        "amount": null,
+        "unit": "nach Geschmack"
       },
       {
         "name": "Salz",
-        "amount": 0.25,
-        "unit": "g"
+        "amount": null,
+        "unit": "nach Geschmack"
+      },
+      {
+        "name": "Pfeffer",
+        "amount": null,
+        "unit": "nach Geschmack"
+      },
+      {
+        "name": "Knoblauch",
+        "amount": null,
+        "unit": "nach Geschmack"
+      },
+      {
+        "name": "Kurkuma",
+        "amount": null,
+        "unit": "nach Geschmack"
+      },
+      {
+        "name": "Majoran",
+        "amount": null,
+        "unit": "nach Geschmack"
+      },
+      {
+        "name": "Vegetarisches Suppengewürz",
+        "amount": 1,
+        "unit": "Prise"
       }
     ],
-    "instructions": ""
+    "instructions": "Zwiebel fein schneiden, Paprika grob würfelig schneiden und in heißem Öl anrösten. Tomatenmark mitrösten. Linsen zugeben und mit etwas Wasser aufgießen. Würzen. Tomaten blanchieren, enthäuten und würfelig schneiden. Gemeinsam mit der gewürfelten Zucchini und dem Mais zugeben. Leise köcheln lassen und gelegentlich umrühren. In das fast fertige Chili die Bohnen einrühren und fein abschmecken. Dazu Gebäck servieren."
   },
   {
     "id": "reis-mit-pilzen",
     "dish_name": "Reis mit Pilzen",
-    "category": "Hauptgerichte",
+    "category": "Vegetarische Gerichte",
     "servings": 4,
-    "ingredients": {
-      "Brown Rice": 250,
-      "Pilz": 300,
-      "Petersilie": 25,
-      "Zwiebel": 100,
-      "Wasser": 800,
-      "Sonnenblumenöl": 10,
-      "Salz": 1.0
-    },
     "ingredient_details": [
       {
-        "name": "Brown Rice",
+        "name": "Vollreis",
         "amount": 250,
         "unit": "g"
       },
       {
-        "name": "Pilz",
+        "name": "Pilze",
         "amount": 300,
         "unit": "g"
       },
       {
         "name": "Petersilie",
-        "amount": 25,
-        "unit": "g"
+        "amount": 1,
+        "unit": "Bund"
       },
       {
         "name": "Zwiebel",
-        "amount": 100,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 800,
-        "unit": "ml"
+        "amount": 1,
+        "unit": "Stk."
       },
       {
         "name": "Sonnenblumenöl",
-        "amount": 10,
-        "unit": "ml"
+        "amount": 1,
+        "unit": "EL"
       },
       {
         "name": "Salz",
-        "amount": 1.0,
-        "unit": "g"
+        "amount": null,
+        "unit": "nach Geschmack"
       }
     ],
-    "instructions": ""
+    "instructions": "Reis garen. Zwiebel fein würfelig schneiden, Pilze blättrig schneiden und in Öl anschwitzen, sie sollen noch Biss haben. Zwiebel und Pilze unter den Reis geben. Petersilie hinzufügen, salzen und die Mischung 10 Minuten zugedeckt im Rohr backen."
   },
   {
     "id": "erdaepfelpfanne",
     "dish_name": "Erdäpfelpfanne",
-    "category": "Hauptgerichte",
+    "category": "Vegetarische Gerichte",
     "servings": 1,
-    "ingredients": {
-      "Kartoffel": 200,
-      "Paprika": 100,
-      "Lauch, roh": 40,
-      "Feta Cheese": 20,
-      "Mozzarella": 20,
-      "Wasser": 200,
-      "Sonnenblumenöl": 10,
-      "Thymian": 4,
-      "Pfeffer": 4,
-      "Salz": 0.25
-    },
     "ingredient_details": [
       {
-        "name": "Kartoffel",
+        "name": "Kartoffeln",
         "amount": 200,
         "unit": "g"
       },
       {
-        "name": "Paprika",
-        "amount": 100,
-        "unit": "g"
-      },
-      {
-        "name": "Lauch, roh",
+        "name": "Lauch",
         "amount": 40,
         "unit": "g"
       },
       {
-        "name": "Feta Cheese",
+        "name": "Schafkäse",
         "amount": 20,
         "unit": "g"
       },
       {
-        "name": "Mozzarella",
+        "name": "Mozzarella fettarm",
         "amount": 20,
         "unit": "g"
       },
       {
-        "name": "Wasser",
-        "amount": 200,
-        "unit": "ml"
-      },
-      {
-        "name": "Sonnenblumenöl",
-        "amount": 10,
-        "unit": "ml"
-      },
-      {
-        "name": "Thymian",
-        "amount": 4,
-        "unit": "g"
-      },
-      {
-        "name": "Pfeffer",
-        "amount": 4,
-        "unit": "g"
-      },
-      {
-        "name": "Salz",
-        "amount": 0.25,
-        "unit": "g"
-      }
-    ],
-    "instructions": ""
-  },
-  {
-    "id": "ueberbackenes-fischfilet",
-    "dish_name": "Überbackenes Fischfilet",
-    "category": "Hauptgerichte",
-    "servings": 1,
-    "ingredients": {
-      "Dorsch, roh": 240,
-      "Karotte": 60,
-      "Green zucchini": 120,
-      "Sauerrahm": 15,
-      "Gouda": 15,
-      "Wasser": 200,
-      "Zitronensaft": 4,
-      "Petersilie": 4,
-      "Salz": 0.25
-    },
-    "ingredient_details": [
-      {
-        "name": "Dorsch, roh",
-        "amount": 240,
-        "unit": "g"
-      },
-      {
-        "name": "Karotte",
-        "amount": 60,
-        "unit": "g"
-      },
-      {
-        "name": "Green zucchini",
-        "amount": 120,
-        "unit": "g"
-      },
-      {
-        "name": "Sauerrahm",
-        "amount": 15,
-        "unit": "g"
-      },
-      {
-        "name": "Gouda",
-        "amount": 15,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 200,
-        "unit": "ml"
-      },
-      {
-        "name": "Zitronensaft",
-        "amount": 4,
-        "unit": "ml"
-      },
-      {
-        "name": "Petersilie",
-        "amount": 4,
-        "unit": "g"
-      },
-      {
-        "name": "Salz",
-        "amount": 0.25,
-        "unit": "g"
-      }
-    ],
-    "instructions": ""
-  },
-  {
-    "id": "dorsch-mit-brokkoli",
-    "dish_name": "Dorsch mit Brokkoli",
-    "category": "Hauptgerichte",
-    "servings": 1,
-    "ingredients": {
-      "Dorsch, roh": 100,
-      "Broccoli": 200,
-      "Wasser": 200,
-      "Rapsöl": 10,
-      "Zitronensaft": 4,
-      "Salz": 0.25
-    },
-    "ingredient_details": [
-      {
-        "name": "Dorsch, roh",
+        "name": "Paprika bunt",
         "amount": 100,
         "unit": "g"
       },
       {
-        "name": "Broccoli",
-        "amount": 200,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 200,
-        "unit": "ml"
-      },
-      {
-        "name": "Rapsöl",
-        "amount": 10,
-        "unit": "ml"
-      },
-      {
-        "name": "Zitronensaft",
-        "amount": 4,
-        "unit": "ml"
+        "name": "Sonnenblumenöl",
+        "amount": 1,
+        "unit": "EL"
       },
       {
         "name": "Salz",
-        "amount": 0.25,
-        "unit": "g"
+        "amount": null,
+        "unit": "nach Geschmack"
+      },
+      {
+        "name": "Pfeffer",
+        "amount": null,
+        "unit": "nach Geschmack"
+      },
+      {
+        "name": "Thymian",
+        "amount": null,
+        "unit": "nach Geschmack"
       }
     ],
-    "instructions": ""
+    "instructions": "Kartoffeln kochen, schälen und in Scheiben schneiden. Lauch und Paprika in feine Streifen schneiden, in der halben Menge Öl anschwitzen und weich dünsten. Kartoffeln in der restlichen Menge Öl anbraten und anschließend Gemüse, Schafkäse und Mozzarella unterheben. Mit Salz, Pfeffer und Thymian würzen und kurz durchrösten."
+  },
+  {
+    "id": "ueberbackenes-fischfilet",
+    "dish_name": "Überbackenes Fischfilet",
+    "category": "Fisch",
+    "servings": 1,
+    "ingredient_details": [
+      {
+        "name": "Fischfilet",
+        "amount": 1,
+        "unit": "Stk. (ca. 240 g)"
+      },
+      {
+        "name": "Karotte",
+        "amount": 1,
+        "unit": "kleine Stk."
+      },
+      {
+        "name": "Zucchini",
+        "amount": 0.5,
+        "unit": "kleine Stk."
+      },
+      {
+        "name": "Käse (36 % F.i.T.)",
+        "amount": 1,
+        "unit": "EL"
+      },
+      {
+        "name": "Sauerrahm",
+        "amount": 1,
+        "unit": "EL"
+      },
+      {
+        "name": "Zitronensaft",
+        "amount": null,
+        "unit": "nach Geschmack"
+      },
+      {
+        "name": "Salz",
+        "amount": null,
+        "unit": "nach Geschmack"
+      },
+      {
+        "name": "Frische Kräuter",
+        "amount": null,
+        "unit": "nach Geschmack"
+      },
+      {
+        "name": "Gewürze",
+        "amount": null,
+        "unit": "nach Geschmack"
+      }
+    ],
+    "instructions": "Fisch mit Zitronensaft einreiben und leicht salzen. Karotte und Zucchini raffeln und mit Sauerrahm sowie geriebenem Käse vermischen. Mit Kräutern und Gewürzen abschmecken und die Mischung auf das Fischfilet streichen. Im Backrohr bei etwa 200 °C überbacken. Dazu Kartoffeln und Salat servieren."
+  },
+  {
+    "id": "zander-in-der-folie",
+    "dish_name": "Zander in der Folie",
+    "category": "Fisch",
+    "servings": 1,
+    "ingredient_details": [
+      {
+        "name": "Zanderfilet",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "name": "Zitrone",
+        "amount": 1,
+        "unit": "Stk."
+      },
+      {
+        "name": "Champignons",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "Tomaten",
+        "amount": 2,
+        "unit": "Stk."
+      },
+      {
+        "name": "Butter",
+        "amount": 5,
+        "unit": "g"
+      },
+      {
+        "name": "Gehackte Petersilie",
+        "amount": 1,
+        "unit": "EL"
+      },
+      {
+        "name": "Salz",
+        "amount": null,
+        "unit": "nach Geschmack"
+      },
+      {
+        "name": "Pfeffer",
+        "amount": null,
+        "unit": "nach Geschmack"
+      },
+      {
+        "name": "Worcestersoße",
+        "amount": null,
+        "unit": "optional"
+      }
+    ],
+    "instructions": "Fischfilet salzen, pfeffern und mit Worcestersoße sowie Zitronensaft beträufeln. Champignons putzen und in Scheiben schneiden. Tomaten in Streifen schneiden, bei Bedarf vorher enthäuten und entkernen. Fischfilet auf Alufolie legen und Champignons sowie Tomaten darauf verteilen. Mit Butterflöckchen belegen und mit Petersilie bestreuen. Die Folie gut verschließen und den Fisch im Ofen bei 200 °C etwa 15 Minuten garen."
+  },
+  {
+    "id": "dorsch-mit-brokkoli",
+    "dish_name": "Dorsch mit Brokkoli",
+    "category": "Fisch",
+    "servings": 1,
+    "ingredient_details": [
+      {
+        "name": "Dorsch (tiefgekühlt)",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "Brokkoli",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "Rapsöl",
+        "amount": 1,
+        "unit": "EL"
+      },
+      {
+        "name": "Zitronensaft",
+        "amount": null,
+        "unit": "nach Geschmack"
+      },
+      {
+        "name": "Salz",
+        "amount": null,
+        "unit": "nach Geschmack"
+      }
+    ],
+    "instructions": "Brokkoli in Salzwasser bissfest dünsten. Dorsch mit Zitronensaft beträufeln und salzen. Anschließend im heißen Rapsöl rasch anbraten. Dazu passt Kartoffelsalat."
+  },
+  {
+    "id": "vollkorn-apfel-muffins",
+    "dish_name": "Vollkorn-Apfel-Muffins",
+    "category": "Süßspeisen",
+    "servings": 12,
+    "ingredient_details": [
+      {
+        "name": "Vollkornmehl",
+        "amount": 18,
+        "unit": "dag"
+      },
+      {
+        "name": "Glattes Mehl",
+        "amount": 18,
+        "unit": "dag"
+      },
+      {
+        "name": "Rohrzucker",
+        "amount": 20,
+        "unit": "dag"
+      },
+      {
+        "name": "Jogurt",
+        "amount": 1,
+        "unit": "Becher"
+      },
+      {
+        "name": "Öl",
+        "amount": 0.125,
+        "unit": "l"
+      },
+      {
+        "name": "Backpulver",
+        "amount": 1,
+        "unit": "Packung"
+      },
+      {
+        "name": "Eier",
+        "amount": 2,
+        "unit": "Stk."
+      },
+      {
+        "name": "Äpfel",
+        "amount": 3,
+        "unit": "Stk."
+      },
+      {
+        "name": "Zimt",
+        "amount": null,
+        "unit": "nach Geschmack"
+      }
+    ],
+    "instructions": "Backrohr auf 180 °C vorheizen. Jogurt, Öl, Eier und Zucker in einer Rührschüssel schaumig schlagen, bis sich der Zucker aufgelöst hat. In einer zweiten Schüssel Mehl, Backpulver, die in Würfel geschnittenen Äpfel und Zimt vermischen. Die trockenen Zutaten kurz unter die flüssigen Zutaten mischen. Den Teig in mit Papierförmchen ausgelegte Muffinformen füllen und im vorgeheizten Backrohr etwa 20 Minuten backen."
   },
   {
     "id": "pfirsich-topfencreme",
     "dish_name": "Pfirsich-Topfencreme",
     "category": "Süßspeisen",
     "servings": 1,
-    "ingredients": {
-      "Hüttenkäse, nature": 250,
-      "Orangensaft": 100,
-      "Pfirsich": 130,
-      "Wasser": 200
-    },
     "ingredient_details": [
       {
-        "name": "Hüttenkäse, nature",
+        "name": "Magertopfen",
         "amount": 250,
-        "unit": "g"
+        "unit": "ml"
       },
       {
         "name": "Orangensaft",
@@ -1793,140 +899,119 @@
         "unit": "ml"
       },
       {
-        "name": "Pfirsich",
-        "amount": 130,
-        "unit": "g"
-      },
-      {
-        "name": "Wasser",
-        "amount": 200,
-        "unit": "ml"
+        "name": "Pfirsichhälften aus der Dose",
+        "amount": 2,
+        "unit": "Stk."
       }
     ],
-    "instructions": ""
+    "instructions": "Alle Zutaten gut vermischen. Tipp: Statt Pfirsichen können auch andere Obstsorten verwendet werden. Kurz vor dem Training eignet sich Dosenobst oft besser, da es leichter verträglich ist."
   },
   {
     "id": "apfelnockerln-mit-nuessen",
     "dish_name": "Apfelnockerln mit Nüssen",
     "category": "Süßspeisen",
     "servings": 2,
-    "ingredients": {
-      "Dinkelmehl, Vollkorn": 125,
-      "Wasser": 400,
-      "Ei": 50,
-      "Apfel": 240,
-      "Haselnuss": 20,
-      "Rapsöl": 10,
-      "Rosine": 15,
-      "Honig": 8,
-      "Zimt": 8,
-      "Salz": 0.5
-    },
     "ingredient_details": [
       {
-        "name": "Dinkelmehl, Vollkorn",
+        "name": "Weizenvollkornmehl oder Dinkelmehl",
         "amount": 125,
         "unit": "g"
       },
       {
         "name": "Wasser",
-        "amount": 400,
+        "amount": 75,
         "unit": "ml"
       },
       {
         "name": "Ei",
-        "amount": 50,
-        "unit": "g"
-      },
-      {
-        "name": "Apfel",
-        "amount": 240,
-        "unit": "g"
-      },
-      {
-        "name": "Haselnuss",
-        "amount": 20,
-        "unit": "g"
-      },
-      {
-        "name": "Rapsöl",
-        "amount": 10,
-        "unit": "ml"
-      },
-      {
-        "name": "Rosine",
-        "amount": 15,
-        "unit": "g"
-      },
-      {
-        "name": "Honig",
-        "amount": 8,
-        "unit": "g"
-      },
-      {
-        "name": "Zimt",
-        "amount": 8,
-        "unit": "g"
+        "amount": 1,
+        "unit": "Stk."
       },
       {
         "name": "Salz",
-        "amount": 0.5,
-        "unit": "g"
+        "amount": null,
+        "unit": "Prise"
+      },
+      {
+        "name": "Öl zum Schwenken",
+        "amount": 1,
+        "unit": "EL"
+      },
+      {
+        "name": "Äpfel",
+        "amount": 2,
+        "unit": "Stk."
+      },
+      {
+        "name": "Zimt",
+        "amount": null,
+        "unit": "nach Geschmack"
+      },
+      {
+        "name": "Rosinen",
+        "amount": null,
+        "unit": "nach Geschmack"
+      },
+      {
+        "name": "Honig",
+        "amount": null,
+        "unit": "etwas"
+      },
+      {
+        "name": "Gehackte Nüsse",
+        "amount": 2,
+        "unit": "EL"
       }
     ],
-    "instructions": ""
+    "instructions": "Mehl, Wasser und Ei zu einem geschmeidigen Teig verarbeiten. Den Teig etwa 30 Minuten rasten lassen und anschließend in Salzwasser einkochen. Kurz ziehen lassen, abseihen und in Öl schwenken. Die Äpfel waschen und reiben. Mit Zimt, Rosinen und etwas Honig in wenig Wasser dünsten. Anschließend die Nockerln vorsichtig unterheben und mit gehackten Nüssen bestreuen."
   },
   {
     "id": "kaiserschmarrn",
     "dish_name": "Kaiserschmarrn",
     "category": "Süßspeisen",
     "servings": 2,
-    "ingredients": {
-      "Ei": 200,
-      "Dinkelmehl, Vollkorn": 65,
-      "Mehl": 60,
-      "Milch": 250,
-      "Wasser": 400,
-      "Zucker": 50,
-      "Salz": 0.5
-    },
     "ingredient_details": [
       {
-        "name": "Ei",
-        "amount": 200,
-        "unit": "g"
+        "name": "Dotter",
+        "amount": 4,
+        "unit": "Stk."
       },
       {
-        "name": "Dinkelmehl, Vollkorn",
-        "amount": 65,
-        "unit": "g"
-      },
-      {
-        "name": "Mehl",
-        "amount": 60,
+        "name": "Zucker",
+        "amount": 30,
         "unit": "g"
       },
       {
         "name": "Milch",
-        "amount": 250,
-        "unit": "ml"
+        "amount": 0.25,
+        "unit": "l"
       },
       {
-        "name": "Wasser",
-        "amount": 400,
-        "unit": "ml"
+        "name": "Vollkornmehl",
+        "amount": 65,
+        "unit": "g"
       },
       {
-        "name": "Zucker",
-        "amount": 50,
+        "name": "Weißmehl",
+        "amount": 60,
         "unit": "g"
       },
       {
         "name": "Salz",
-        "amount": 0.5,
+        "amount": null,
+        "unit": "Prise"
+      },
+      {
+        "name": "Eiklar",
+        "amount": 4,
+        "unit": "Stk."
+      },
+      {
+        "name": "Zucker zum Bestreuen",
+        "amount": 20,
         "unit": "g"
       }
     ],
-    "instructions": ""
+    "instructions": "Einen Abtrieb aus Dotter und Zucker bereiten. Milch, Mehl und Salz einrühren. Anschließend das steif geschlagene Eiklar vorsichtig unterheben. Den Teig in eine Teflonpfanne ohne zusätzliches Fett gießen und auf der Unterseite braun rösten. Umwenden und die zweite Seite ebenfalls bräunen. Danach mit einer Gabel in kleine Stücke zerreißen und mit etwa 20 g Zucker bestreuen."
   }
 ]

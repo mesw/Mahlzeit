@@ -44,6 +44,9 @@ public:
     QList<RecipeIngredient> ingredients() const { return m_ingredients; }
     void setIngredients(const QList<RecipeIngredient> &list) { m_ingredients = list; }
 
+    QList<RecipeIngredient> ingredientDetails() const { return m_ingredients; }
+    void setIngredientDetails(const QList<RecipeIngredient> &list) { m_ingredients = list; }
+
     QString instructions() const { return m_instructions; }
     void setInstructions(const QString &instructions) { m_instructions = instructions; }
 

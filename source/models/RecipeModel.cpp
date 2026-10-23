@@ -1,5 +1,6 @@
 #include "RecipeModel.h"
 #include <algorithm>
+#include <QSet>
 
 RecipeModel::RecipeModel(RecipeRepository *repo, PantryModel *pantry, SettingsManager *settings, SuggestionEngine *engine, QObject *parent)
     : QAbstractListModel(parent)
@@ -25,29 +26,75 @@ RecipeModel::RecipeModel(RecipeRepository *repo, PantryModel *pantry, SettingsMa
 }
 
 void RecipeModel::updateList() {
-    beginResetModel();
     m_allItems.clear();
 
-    if (!m_repo) {
-        m_visibleItems.clear();
-        endResetModel();
-        emit countChanged();
-        emit availableCategoriesChanged();
-        return;
-    }
-
-    for (const auto &r : m_repo->recipes()) {
-        RecipeEvaluation eval;
-        if (m_engine) {
-            eval = m_engine->evaluateRecipe(r);
+    if (m_repo) {
+        for (const auto &r : m_repo->recipes()) {
+            RecipeEvaluation eval;
+            if (m_engine) {
+                eval = m_engine->evaluateRecipe(r);
+            }
+            m_allItems.append(RecipeViewModelItem{r, eval});
         }
-        m_allItems.append(RecipeViewModelItem{r, eval});
     }
 
-    filterAndSort();
-    endResetModel();
+    applyFilterAndSort();
     emit countChanged();
     emit availableCategoriesChanged();
+}
+
+void RecipeModel::applyFilterAndSort() {
+    const QList<RecipeViewModelItem> oldItems = m_visibleItems;
+    filterAndSort(); // fills m_visibleItems with the new state
+    const QList<RecipeViewModelItem> newItems = m_visibleItems;
+    m_visibleItems = oldItems; // step from old to new state via incremental signals
+
+    auto idAt = [](const QList<RecipeViewModelItem> &list, int i) { return list.at(i).recipe.id(); };
+
+    // 1. Remove rows that no longer exist
+    QSet<QString> newIds;
+    for (const auto &it : newItems) {
+        newIds.insert(it.recipe.id());
+    }
+    for (int i = m_visibleItems.size() - 1; i >= 0; --i) {
+        if (!newIds.contains(idAt(m_visibleItems, i))) {
+            beginRemoveRows(QModelIndex(), i, i);
+            m_visibleItems.removeAt(i);
+            endRemoveRows();
+        }
+    }
+
+    // 2. Move / insert rows so the order matches the new state
+    for (int i = 0; i < newItems.size(); ++i) {
+        const QString id = idAt(newItems, i);
+        if (i < m_visibleItems.size() && idAt(m_visibleItems, i) == id) {
+            continue;
+        }
+
+        int from = -1;
+        for (int j = i + 1; j < m_visibleItems.size(); ++j) {
+            if (idAt(m_visibleItems, j) == id) {
+                from = j;
+                break;
+            }
+        }
+
+        if (from >= 0) {
+            beginMoveRows(QModelIndex(), from, from, QModelIndex(), i);
+            m_visibleItems.move(from, i);
+            endMoveRows();
+        } else {
+            beginInsertRows(QModelIndex(), i, i);
+            m_visibleItems.insert(i, newItems.at(i));
+            endInsertRows();
+        }
+    }
+
+    // 3. Refresh data of all rows (starred state, evaluation, ...)
+    m_visibleItems = newItems;
+    if (!m_visibleItems.isEmpty()) {
+        emit dataChanged(index(0), index(m_visibleItems.size() - 1));
+    }
 }
 
 void RecipeModel::filterAndSort() {
@@ -193,10 +240,8 @@ QHash<int, QByteArray> RecipeModel::roleNames() const {
 
 void RecipeModel::setOnlyReadyToCook(bool enabled) {
     if (m_onlyReadyToCook != enabled) {
-        beginResetModel();
         m_onlyReadyToCook = enabled;
-        filterAndSort();
-        endResetModel();
+        applyFilterAndSort();
         emit onlyReadyToCookChanged();
         emit countChanged();
     }
@@ -204,10 +249,8 @@ void RecipeModel::setOnlyReadyToCook(bool enabled) {
 
 void RecipeModel::setOnlyTimeMatch(bool enabled) {
     if (m_onlyTimeMatch != enabled) {
-        beginResetModel();
         m_onlyTimeMatch = enabled;
-        filterAndSort();
-        endResetModel();
+        applyFilterAndSort();
         emit onlyTimeMatchChanged();
         emit countChanged();
     }
@@ -215,10 +258,8 @@ void RecipeModel::setOnlyTimeMatch(bool enabled) {
 
 void RecipeModel::setOnlyStarred(bool enabled) {
     if (m_onlyStarred != enabled) {
-        beginResetModel();
         m_onlyStarred = enabled;
-        filterAndSort();
-        endResetModel();
+        applyFilterAndSort();
         emit onlyStarredChanged();
         emit countChanged();
     }
@@ -226,10 +267,8 @@ void RecipeModel::setOnlyStarred(bool enabled) {
 
 void RecipeModel::setCategoryFilter(const QString &cat) {
     if (m_categoryFilter != cat) {
-        beginResetModel();
         m_categoryFilter = cat;
-        filterAndSort();
-        endResetModel();
+        applyFilterAndSort();
         emit categoryFilterChanged();
         emit countChanged();
     }
@@ -237,10 +276,8 @@ void RecipeModel::setCategoryFilter(const QString &cat) {
 
 void RecipeModel::setSearchQuery(const QString &query) {
     if (m_searchQuery != query) {
-        beginResetModel();
         m_searchQuery = query;
-        filterAndSort();
-        endResetModel();
+        applyFilterAndSort();
         emit searchQueryChanged();
         emit countChanged();
     }
@@ -248,10 +285,8 @@ void RecipeModel::setSearchQuery(const QString &query) {
 
 void RecipeModel::setSortMode(int mode) {
     if (m_sortMode != mode) {
-        beginResetModel();
         m_sortMode = mode;
-        filterAndSort();
-        endResetModel();
+        applyFilterAndSort();
         emit sortModeChanged();
     }
 }

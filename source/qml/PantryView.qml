@@ -47,22 +47,21 @@ Item {
         }
 
         // Progress Bar
-        ProgressBar {
+        Rectangle {
             Layout.fillWidth: true
-            from: 0
-            to: Math.max(1, pantryModel.totalCount)
-            value: pantryModel.availableCount
             height: 6
-            background: Rectangle {
-                color: "#E0E6E0"
+            radius: 3
+            color: "#E0E6E0"
+            clip: true
+
+            Rectangle {
+                width: parent.width * (pantryModel.availableCount / Math.max(1, pantryModel.totalCount))
+                height: parent.height
                 radius: 3
-            }
-            contentItem: Item {
-                Rectangle {
-                    width: parent.width * (pantryModel.availableCount / Math.max(1, pantryModel.totalCount))
-                    height: parent.height
-                    radius: 3
-                    color: "#2E7D32"
+                color: "#2E7D32"
+
+                Behavior on width {
+                    NumberAnimation { duration: 150 }
                 }
             }
         }
@@ -104,6 +103,8 @@ Item {
             Layout.fillHeight: true
             clip: true
             spacing: 6
+            boundsBehavior: Flickable.StopAtBounds
+            flickableDirection: Flickable.VerticalFlick
             model: pantryModel
 
             delegate: Rectangle {
@@ -164,13 +165,13 @@ Item {
                         }
                     }
 
-                    // Toggle Button
-                    Button {
-                        text: model.available ? qsTr("Vorrätig") : qsTr("Hinzufügen")
-                        flat: !model.available
-                        font.pixelSize: 12
-                        onClicked: pantryModel.toggleAvailable(index)
-                    }
+                    // // Toggle Button
+                    // Button {
+                    //     text: model.available ? qsTr("Vorrätig") : qsTr("Hinzufügen")
+                    //     flat: !model.available
+                    //     font.pixelSize: 12
+                    //     onClicked: pantryModel.toggleAvailable(index)
+                    // }
                 }
             }
 

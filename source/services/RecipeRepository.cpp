@@ -7,7 +7,7 @@
 #include <QUrl>
 #include <QNetworkRequest>
 
-static const QString REMOTE_RECIPES_URL = QStringLiteral("https://mesw.github.io/Malzeit/res/recipies.json");
+static const QString REMOTE_RECIPES_URL = QStringLiteral("https://mesw.github.io/Malzeit/resources/recipes.json");
 
 RecipeRepository::RecipeRepository(SettingsManager *settings, QObject *parent)
     : QObject(parent)
@@ -83,13 +83,10 @@ bool RecipeRepository::parseJsonData(const QByteArray &data, QList<Recipe> &outR
 void RecipeRepository::loadFromResource() {
     const QStringList candidatePaths = {
         ":/resources/recipes.json",
-        ":/resources/recipies.json",
         ":/recipes.json",
-        ":/recipies.json",
         ":/qt/qml/Malzeit/resources/recipes.json",
         ":/qt/qml/Malzeit/recipes.json",
         "resources/recipes.json",
-        "resources/recipies.json",
         "../resources/recipes.json"
     };
 
@@ -121,6 +118,10 @@ bool RecipeRepository::loadFromLocalCache() {
     QSettings settings("Malzeit", "Malzeit");
     const QString json = settings.value("cachedRecipesJson").toString();
     if (json.isEmpty()) {
+        return false;
+    }
+    // Invalidate stale cache if it still uses legacy "ingredients" map
+    if (json.contains("\"ingredients\":")) {
         return false;
     }
 

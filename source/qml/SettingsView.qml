@@ -11,6 +11,7 @@ Item {
         anchors.fill: parent
         contentWidth: parent.width
         clip: true
+        ScrollBar.horizontal: ScrollBar { policy: ScrollBar.AlwaysOff; visible: false }
 
         ColumnLayout {
             width: parent.width
@@ -32,6 +33,7 @@ Item {
                 Text {
                     text: qsTr("Kategorien, Essenszeiten, Cloudflare-Sync & Rezepte verwalten")
                     font.pixelSize: 13
+                    wrapMode: Text.Wrap
                     color: "#5A6B5C"
                 }
             }
@@ -137,7 +139,7 @@ Item {
                     }
 
                     // Quick custom slot adder
-                    RowLayout {
+                    ColumnLayout {
                         Layout.fillWidth: true
                         spacing: 6
 
@@ -164,7 +166,6 @@ Item {
                             from: 0
                             to: 23
                             value: 12
-                            Layout.preferredWidth: 65
                         }
 
                         Text { text: "bis"; font.pixelSize: 12; color: "#5A6B5C" }
@@ -174,7 +175,6 @@ Item {
                             from: 0
                             to: 23
                             value: 14
-                            Layout.preferredWidth: 65
                         }
 
                         Button {
@@ -208,6 +208,7 @@ Item {
                         font.pixelSize: 16
                         font.bold: true
                         color: "#1B241B"
+                        wrapMode: Text.Wrap
                     }
 
                     Text {
@@ -316,7 +317,7 @@ Item {
                     }
 
                     Text {
-                        text: qsTr("Geladene Rezepte: %1. Neue oder geänderte Standardrezepte können online von mesw.github.io/Malzeit/res/recipies.json ohne Neukompilierung nachgeladen werden.")
+                        text: qsTr("Geladene Rezepte: %1. Neue oder geänderte Standardrezepte können online von mesw.github.io/Malzeit/resources/recipes.json ohne Neukompilierung nachgeladen werden.")
                             .arg(recipeRepo.recipeCount)
                         font.pixelSize: 12
                         color: "#5A6B5C"
@@ -371,6 +372,7 @@ Item {
                         font.pixelSize: 15
                         font.bold: true
                         color: "#1B5E20"
+                        wrapMode: Text.Wrap
                     }
 
                     Text {
@@ -384,9 +386,27 @@ Item {
                     Button {
                         text: qsTr("Alle lokalen Daten löschen")
                         flat: true
-                        onClicked: {
-                            settingsManager.clearAllUserData();
-                            root.showToast(qsTr("Alle lokalen Benutzerdaten wurden gelöscht."));
+
+                        onClicked: confirmDeleteDialog.open()
+                    }
+
+                    Dialog {
+                        id: confirmDeleteDialog
+
+                        title: qsTr("Bestätigung")
+                        modal: true
+                        anchors.centerIn: parent
+
+                        standardButtons: Dialog.Yes | Dialog.No
+
+                        Text {
+                            text: qsTr("Möchten Sie wirklich alle lokalen Benutzerdaten löschen?")
+                            wrapMode: Text.Wrap
+                        }
+
+                        onAccepted: {
+                            settingsManager.clearAllUserData()
+                            root.showToast(qsTr("Alle lokalen Benutzerdaten wurden gelöscht."))
                         }
                     }
                 }

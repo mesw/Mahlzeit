@@ -91,6 +91,7 @@ public slots:
 
 private:
     void filterAndSort();
+    void applyFilterAndSort(); // Applies filter/sort incrementally (no model reset, keeps scroll position)
 
     RecipeRepository *m_repo{nullptr};
     PantryModel *m_pantry{nullptr};
