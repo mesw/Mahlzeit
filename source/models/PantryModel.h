@@ -12,6 +12,9 @@ struct PantryItem {
     QString name;
     bool available{false};
     int recipeCount{0};
+    QString categoryName;
+    int categoryOrder{999};
+    QStringList aliases;
 };
 
 class PantryModel : public QAbstractListModel {
@@ -20,12 +23,18 @@ class PantryModel : public QAbstractListModel {
     Q_PROPERTY(int availableCount READ availableCount NOTIFY countsChanged)
     Q_PROPERTY(QString filterText READ filterText WRITE setFilterText NOTIFY filterTextChanged)
     Q_PROPERTY(int filterMode READ filterMode WRITE setFilterMode NOTIFY filterModeChanged) // 0: All, 1: Available, 2: Missing
+    Q_PROPERTY(QString categoryFilter READ categoryFilter WRITE setCategoryFilter NOTIFY categoryFilterChanged)
+    Q_PROPERTY(int sortOrder READ sortOrder WRITE setSortOrder NOTIFY sortOrderChanged) // 0: A-Z, 1: Store aisle order
+    Q_PROPERTY(QStringList availableCategories READ availableCategories NOTIFY categoriesChanged)
 
 public:
     enum Roles {
         NameRole = Qt::UserRole + 1,
         AvailableRole,
-        RecipeCountRole
+        RecipeCountRole,
+        CategoryRole,
+        CategoryOrderRole,
+        AliasesRole
     };
     Q_ENUM(Roles)
 
@@ -44,6 +53,15 @@ public:
     int filterMode() const { return m_filterMode; }
     void setFilterMode(int mode);
 
+    QString categoryFilter() const { return m_categoryFilter; }
+    void setCategoryFilter(const QString &category);
+
+    int sortOrder() const { return m_sortOrder; }
+    void setSortOrder(int order);
+
+    QStringList availableCategories() const;
+    QString canonicalName(const QString &ingredientName) const;
+
     Q_INVOKABLE void toggleAvailable(int visibleIndex);
     Q_INVOKABLE void setItemAvailable(const QString &ingredientName, bool available);
     Q_INVOKABLE bool isIngredientAvailable(const QString &ingredientName) const;
@@ -57,7 +75,12 @@ signals:
     void countsChanged();
     void filterTextChanged();
     void filterModeChanged();
+    void categoryFilterChanged();
+    void sortOrderChanged();
+    void categoriesChanged();
     void pantryChanged();
+    void itemAvailabilityEdited(const QString &canonicalName, bool available);
+    void bulkAvailabilityEdited(const QMap<QString, bool> &changes);
 
 private slots:
     void rebuildIngredientList();
@@ -75,4 +98,6 @@ private:
 
     QString m_filterText;
     int m_filterMode{0};
+    QString m_categoryFilter{QStringLiteral("Alle")};
+    int m_sortOrder{0};
 };

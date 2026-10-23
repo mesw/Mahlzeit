@@ -1,12 +1,11 @@
 name = "malzeit-pantry-sync"
 main = "worker.js"
-compatibility_date = "2024-04-01"
+compatibility_date = "2024-11-01"
 
-[durable_objects]
-bindings = [
-  { name = "PANTRY_ROOMS", class_name = "PantrySyncRoom" }
-]
+[[durable_objects.bindings]]
+name = "PANTRY_ROOMS"
+class_name = "PantrySyncRoom"
 
 [[migrations]]
 tag = "v1"
-new_classes = ["PantrySyncRoom"]
+new_sqlite_classes = ["PantrySyncRoom"]

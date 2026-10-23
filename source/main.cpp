@@ -31,10 +31,10 @@ int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
-    app.setOrganizationName("Malzeit");
-    app.setOrganizationDomain("malzeit.app");
-    app.setApplicationName("Malzeit");
-    app.setApplicationDisplayName("Malzeit");
+    app.setOrganizationName("Mahlzeit");
+    app.setOrganizationDomain("mahlzeit.app");
+    app.setApplicationName("Mahlzeit");
+    app.setApplicationDisplayName("Mahlzeit");
 
 #ifdef HAS_EMOJI_FONT
     const int fontId = QFontDatabase::addApplicationFont(
@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
     const QUrl url(QStringLiteral("qrc:/source/qml/Main.qml"));
     engine.load(url);
     if (engine.rootObjects().isEmpty()) {
-        engine.loadFromModule("Malzeit", "Main");
+        engine.loadFromModule("Mahlzeit", "Main");
     }
 
     return app.exec();

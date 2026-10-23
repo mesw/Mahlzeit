@@ -10,7 +10,7 @@
 #include "services/SuggestionEngine.h"
 #include "models/RecipeModel.h"
 
-class TestMalzeit : public QObject {
+class TestMahlzeit : public QObject {
     Q_OBJECT
 
 private slots:
@@ -18,6 +18,7 @@ private slots:
     void testRecipeJsonParsing();
     void testServingsScaling();
     void testPantryManagement();
+    void testAliasesAndCategories();
     void testShoppingListLogic();
     void testSuggestionEngineTimeAndAvailability();
     void cleanupTestCase();
@@ -31,9 +32,9 @@ private:
     RecipeModel *m_recipeModel{nullptr};
 };
 
-void TestMalzeit::initTestCase() {
-    QCoreApplication::setOrganizationName("MalzeitTest");
-    QCoreApplication::setApplicationName("MalzeitTest");
+void TestMahlzeit::initTestCase() {
+    QCoreApplication::setOrganizationName("MahlzeitTest");
+    QCoreApplication::setApplicationName("MahlzeitTest");
 
     m_settings = new SettingsManager(this);
     m_settings->clearAllUserData();
@@ -45,7 +46,7 @@ void TestMalzeit::initTestCase() {
     m_recipeModel = new RecipeModel(m_repo, m_pantry, m_settings, m_engine, this);
 }
 
-void TestMalzeit::testRecipeJsonParsing() {
+void TestMahlzeit::testRecipeJsonParsing() {
     QVERIFY(m_repo->recipeCount() >= 32);
 
     Recipe milchreis = m_repo->findById("milchreis-mit-pfirsich-und-honig");
@@ -55,7 +56,7 @@ void TestMalzeit::testRecipeJsonParsing() {
     QVERIFY(milchreis.ingredients().size() >= 5);
 }
 
-void TestMalzeit::testServingsScaling() {
+void TestMahlzeit::testServingsScaling() {
     Recipe hirsebrei = m_repo->findById("hirsebrei"); // 2 servings base, 100g Hirse
     QCOMPARE(hirsebrei.servings(), 2);
 
@@ -76,7 +77,7 @@ void TestMalzeit::testServingsScaling() {
     }
 }
 
-void TestMalzeit::testPantryManagement() {
+void TestMahlzeit::testPantryManagement() {
     m_pantry->clearAll();
     QCOMPARE(m_pantry->availableCount(), 0);
 
@@ -92,7 +93,38 @@ void TestMalzeit::testPantryManagement() {
     QCOMPARE(m_pantry->availableCount(), m_pantry->totalCount());
 }
 
-void TestMalzeit::testShoppingListLogic() {
+void TestMahlzeit::testAliasesAndCategories() {
+    m_pantry->clearAll();
+
+    // Test canonical alias resolution
+    QCOMPARE(m_repo->canonicalIngredientName("Äpfel"), QString("Apfel"));
+    QCOMPARE(m_repo->canonicalIngredientName("Dotter"), QString("Ei"));
+    QCOMPARE(m_repo->canonicalIngredientName("Eiklar"), QString("Ei"));
+    QCOMPARE(m_repo->canonicalIngredientName("Erdäpfel"), QString("Kartoffeln"));
+
+    // Setting an alias available marks the canonical ingredient and all other variants available
+    m_pantry->setItemAvailable("Dotter", true);
+    QVERIFY(m_pantry->isIngredientAvailable("Ei"));
+    QVERIFY(m_pantry->isIngredientAvailable("Eiklar"));
+    QVERIFY(m_pantry->isIngredientAvailable("Harte Eier"));
+    QCOMPARE(m_pantry->availableCount(), 1);
+
+    // Test store aisle ordering and overrides
+    m_settings->setActiveStoreId("stamm-supermarkt");
+    const int produceOrderMain = m_repo->ingredientCategoryOrder("Apfel");
+    const int breadOrderMain = m_repo->ingredientCategoryOrder("Haferflocken");
+    QVERIFY(produceOrderMain < breadOrderMain);
+
+    m_settings->setActiveStoreId("discounter");
+    const int produceOrderDisc = m_repo->ingredientCategoryOrder("Apfel");
+    const int breadOrderDisc = m_repo->ingredientCategoryOrder("Haferflocken");
+    QVERIFY(breadOrderDisc < produceOrderDisc);
+    QCOMPARE(m_repo->ingredientCategoryId("Haltbarmilch", "discounter"), QString("chilled"));
+
+    m_settings->setActiveStoreId("stamm-supermarkt");
+}
+
+void TestMahlzeit::testShoppingListLogic() {
     m_pantry->clearAll();
     m_shopping->rebuildList();
 
@@ -113,7 +145,7 @@ void TestMalzeit::testShoppingListLogic() {
     QVERIFY(m_pantry->isIngredientAvailable("Magermilch"));
 }
 
-void TestMalzeit::testSuggestionEngineTimeAndAvailability() {
+void TestMahlzeit::testSuggestionEngineTimeAndAvailability() {
     m_pantry->clearAll();
 
     Recipe milchreis = m_repo->findById("milchreis-mit-pfirsich-und-honig");
@@ -145,9 +177,9 @@ void TestMalzeit::testSuggestionEngineTimeAndAvailability() {
     QVERIFY(!evalNight.isTimeMatch);
 }
 
-void TestMalzeit::cleanupTestCase() {
+void TestMahlzeit::cleanupTestCase() {
     m_settings->clearAllUserData();
 }
 
-QTEST_MAIN(TestMalzeit)
-#include "test_malzeit.moc"
+QTEST_MAIN(TestMahlzeit)
+#include "test_mahlzeit.moc"

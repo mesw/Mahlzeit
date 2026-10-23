@@ -1,7 +1,7 @@
-find_package(Qt6 REQUIRED COMPONENTS Core Gui Test Network)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Test Network WebSockets)
 
-qt_add_executable(testMalzeit
-    test_malzeit.cpp
+qt_add_executable(testMahlzeit
+    test_mahlzeit.cpp
     ../source/models/Recipe.h
     ../source/models/Recipe.cpp
     ../source/models/PantryModel.h
@@ -20,23 +20,24 @@ qt_add_executable(testMalzeit
     ../source/services/SyncManager.cpp
 )
 
-target_include_directories(testMalzeit PRIVATE
+target_include_directories(testMahlzeit PRIVATE
     ../source
     ../source/models
     ../source/services
 )
 
-qt_add_resources(testMalzeit "test_resources"
+qt_add_resources(testMahlzeit "test_resources"
     PREFIX "/"
     FILES
         ../resources/recipes.json
 )
 
-target_link_libraries(testMalzeit PRIVATE
+target_link_libraries(testMahlzeit PRIVATE
     Qt6::Core
     Qt6::Gui
     Qt6::Test
     Qt6::Network
+    Qt6::WebSockets
 )
 
-add_test(NAME testMalzeit COMMAND testMalzeit)
+add_test(NAME testMahlzeit COMMAND testMahlzeit)

@@ -10,12 +10,12 @@ Item {
     ColumnLayout {
         anchors.fill: parent
         anchors.margins: 16
-        spacing: 12
+        spacing: 10
 
         // Header
         RowLayout {
             Layout.fillWidth: true
-            spacing: 12
+            spacing: 8
 
             ColumnLayout {
                 Layout.fillWidth: true
@@ -23,15 +23,19 @@ Item {
 
                 Text {
                     text: qsTr("Einkaufsliste")
-                    font.pixelSize: 24
+                    font.pixelSize: 22
                     font.bold: true
                     color: "#1B241B"
+                    elide: Text.ElideRight
+                    Layout.fillWidth: true
                 }
 
                 Text {
                     text: qsTr("%n Zutat(en) zu besorgen", "", shoppingModel.itemCount)
-                    font.pixelSize: 14
+                    font.pixelSize: 13
                     color: "#5A6B5C"
+                    elide: Text.ElideRight
+                    Layout.fillWidth: true
                 }
             }
 
@@ -40,40 +44,72 @@ Item {
                 font.bold: true
                 onClicked: {
                     var listText = shoppingModel.formattedShoppingList();
-                    // Copy to clipboard
                     clipboardHelper.copyText(listText);
                     root.showToast(qsTr("Einkaufsliste in die Zwischenablage kopiert!"));
                 }
             }
         }
 
-        // Filters and Controls
+        // Search Field
+        TextField {
+            id: searchField
+            Layout.fillWidth: true
+            placeholderText: qsTr("Einkaufsliste filtern...")
+            text: shoppingModel.searchQuery
+            onTextChanged: shoppingModel.searchQuery = text
+            selectByMouse: true
+
+            background: Rectangle {
+                color: "#FFFFFF"
+                radius: 8
+                border.color: searchField.activeFocus ? "#2E7D32" : "#D0D7D0"
+                border.width: 1
+            }
+        }
+
+        // Store, Category & Sort Controls
         RowLayout {
             Layout.fillWidth: true
-            spacing: 8
+            spacing: 6
 
-            TextField {
-                id: searchField
+            // Active Supermarket Selector
+            ComboBox {
+                id: storeCombo
+                visible: recipeRepo.stores.length > 0
+                model: recipeRepo.stores
+                textRole: "name"
+                valueRole: "id"
                 Layout.fillWidth: true
-                placeholderText: qsTr("Einkaufsliste filtern...")
-                text: shoppingModel.searchQuery
-                onTextChanged: shoppingModel.searchQuery = text
-                selectByMouse: true
-
-                background: Rectangle {
-                    color: "#FFFFFF"
-                    radius: 8
-                    border.color: searchField.activeFocus ? "#2E7D32" : "#D0D7D0"
-                    border.width: 1
+                currentIndex: {
+                    var stores = recipeRepo.stores;
+                    for (var i = 0; i < stores.length; ++i) {
+                        if (stores[i].id === settingsManager.activeStoreId) {
+                            return i;
+                        }
+                    }
+                    return 0;
+                }
+                onActivated: function(index) {
+                    var stores = recipeRepo.stores;
+                    if (index >= 0 && index < stores.length) {
+                        settingsManager.activeStoreId = stores[index].id;
+                    }
                 }
             }
 
             ComboBox {
+                id: categoryCombo
+                model: shoppingModel.availableCategories
+                Layout.fillWidth: true
+                onActivated: shoppingModel.categoryFilter = currentText
+            }
+
+            ComboBox {
                 id: sortCombo
-                model: [qsTr("A - Z"), qsTr("★ Favoriten"), qsTr("Häufigkeit")]
+                model: [qsTr("🛒 Gang"), qsTr("A - Z"), qsTr("★ Favoriten"), qsTr("Häufigkeit")]
                 currentIndex: shoppingModel.sortOrder
                 onActivated: shoppingModel.sortOrder = currentIndex
-                Layout.preferredWidth: 125
+                Layout.preferredWidth: 105
             }
         }
 
@@ -93,6 +129,7 @@ Item {
                 font.pixelSize: 13
                 font.bold: shoppingModel.onlyStarred
                 color: shoppingModel.onlyStarred ? "#B26A00" : "#333333"
+                elide: Text.ElideRight
                 Layout.fillWidth: true
             }
         }
@@ -107,6 +144,45 @@ Item {
             flickableDirection: Flickable.VerticalFlick
             model: shoppingModel
             boundsBehavior: Flickable.StopAtBounds
+
+            section.property: shoppingModel.sortOrder === 0 ? "category" : ""
+            section.criteria: ViewSection.FullString
+            section.delegate: Rectangle {
+                width: listView.width
+                height: 32
+                color: "transparent"
+
+                RowLayout {
+                    anchors.fill: parent
+                    anchors.leftMargin: 4
+                    anchors.rightMargin: 4
+                    spacing: 6
+
+                    Rectangle {
+                        implicitHeight: 22
+                        implicitWidth: secLabel.implicitWidth + 16
+                        radius: 6
+                        color: "#E8F5E9"
+                        border.color: "#C8E6C9"
+                        border.width: 1
+
+                        Text {
+                            id: secLabel
+                            anchors.centerIn: parent
+                            text: section
+                            font.pixelSize: 12
+                            font.bold: true
+                            color: "#1B5E20"
+                        }
+                    }
+
+                    Rectangle {
+                        Layout.fillWidth: true
+                        height: 1
+                        color: "#DCE4DC"
+                    }
+                }
+            }
 
             remove: Transition {
                 NumberAnimation { property: "opacity"; to: 0.0; duration: 150 }
@@ -128,8 +204,8 @@ Item {
 
                     // Star / Favorite Badge
                     Rectangle {
-                        width: 24
-                        height: 24
+                        implicitWidth: 24
+                        implicitHeight: 24
                         radius: 12
                         color: model.isUsedInStarred ? "#FFF8E1" : "#F4F6F4"
                         border.color: model.isUsedInStarred ? "#FFA000" : "#D4DDD4"
@@ -148,13 +224,41 @@ Item {
                         Layout.fillWidth: true
                         spacing: 2
 
-                        Text {
-                            text: model.name
-                            font.pixelSize: 15
-                            font.bold: true
-                            color: "#1B241B"
-                            elide: Text.ElideRight
+                        RowLayout {
                             Layout.fillWidth: true
+                            spacing: 8
+
+                            Text {
+                                text: model.name
+                                font.pixelSize: 15
+                                font.bold: true
+                                color: "#1B241B"
+                                elide: Text.ElideRight
+                                Layout.fillWidth: true
+                            }
+
+                            Rectangle {
+                                visible: shoppingModel.sortOrder !== 0 && model.category.length > 0
+                                implicitHeight: 18
+                                implicitWidth: Math.min(115, catBadgeText.implicitWidth + 10)
+                                radius: 9
+                                color: "#F1F6F1"
+                                border.color: "#D6E2D6"
+                                border.width: 1
+
+                                Text {
+                                    id: catBadgeText
+                                    anchors.fill: parent
+                                    anchors.leftMargin: 5
+                                    anchors.rightMargin: 5
+                                    verticalAlignment: Text.AlignVCenter
+                                    horizontalAlignment: Text.AlignHCenter
+                                    text: model.category
+                                    font.pixelSize: 10
+                                    color: "#4A5D4B"
+                                    elide: Text.ElideRight
+                                }
+                            }
                         }
 
                         Text {

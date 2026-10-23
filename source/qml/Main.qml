@@ -6,10 +6,10 @@ ApplicationWindow {
     id: appWindow
     width: 480
     height: 800
-    minimumWidth: 340
+    minimumWidth: 320
     minimumHeight: 520
     visible: true
-    title: qsTr("Malzeit - Smarte Vorrats- & Rezeptplanung")
+    title: qsTr("Mahlzeit - Smarte Vorrats- & Rezeptplanung")
     color: "#F6F8F6"
 
     property int activeTab: 2 // Default to Recipes tab
@@ -42,7 +42,7 @@ ApplicationWindow {
                 spacing: 12
 
                 Text {
-                    text: "🥗 Malzeit"
+                    text: "🥗 Mahlzeit"
                     font.pixelSize: 20
                     font.bold: true
                     color: "#FFFFFF"

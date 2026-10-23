@@ -123,12 +123,16 @@ void RecipeModel::filterAndSort() {
             continue;
         }
 
-        // Filter: Search query (matches recipe title or any ingredient name)
+        // Filter: Search query (matches recipe title or any ingredient/canonical name)
         if (!query.isEmpty()) {
             bool matches = item.recipe.dishName().toLower().contains(query);
             if (!matches) {
                 for (const auto &ing : item.recipe.ingredients()) {
                     if (ing.name.toLower().contains(query)) {
+                        matches = true;
+                        break;
+                    }
+                    if (m_repo && m_repo->canonicalIngredientName(ing.name).toLower().contains(query)) {
                         matches = true;
                         break;
                     }

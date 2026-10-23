@@ -30,7 +30,10 @@ RecipeEvaluation SuggestionEngine::evaluateRecipe(const Recipe &recipe) const {
         const QString name = ing.name.trimmed();
         const bool available = m_pantry ? m_pantry->isIngredientAvailable(name) : false;
         if (!available) {
-            eval.missingIngredients.append(name);
+            const QString canon = m_pantry ? m_pantry->canonicalName(name) : name;
+            if (!canon.isEmpty() && !eval.missingIngredients.contains(canon)) {
+                eval.missingIngredients.append(canon);
+            }
         }
     }
 

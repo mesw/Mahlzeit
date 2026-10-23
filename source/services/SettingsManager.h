@@ -7,6 +7,12 @@
 #include <QVariantMap>
 #include <QSet>
 #include <QMap>
+#include <QPair>
+
+struct TimedDeltaEntry {
+    bool value{false};
+    qint64 timestampMs{0};
+};
 
 struct CategoryTimeSlot {
     QString category;
@@ -48,9 +54,13 @@ class SettingsManager : public QObject {
     Q_PROPERTY(QString syncRoomId READ syncRoomId WRITE setSyncRoomId NOTIFY syncRoomIdChanged)
     Q_PROPERTY(QString syncToken READ syncToken WRITE setSyncToken NOTIFY syncTokenChanged)
     Q_PROPERTY(bool autoSync READ autoSync WRITE setAutoSync NOTIFY autoSyncChanged)
+    Q_PROPERTY(QString activeStoreId READ activeStoreId WRITE setActiveStoreId NOTIFY activeStoreIdChanged)
+    Q_PROPERTY(QString recipesUrl READ recipesUrl WRITE setRecipesUrl NOTIFY recipesUrlChanged)
 
 public:
     explicit SettingsManager(QObject *parent = nullptr);
+
+    static QString defaultRecipesUrl();
 
     Q_INVOKABLE void resetTimeSlotsToDefault();
     Q_INVOKABLE void updateTimeSlot(const QString &category, int startHour, int startMinute, int endHour, int endMinute);
@@ -63,11 +73,20 @@ public:
     Q_INVOKABLE bool isRecipeStarred(const QString &recipeId) const;
     Q_INVOKABLE void setRecipeStarred(const QString &recipeId, bool starred);
     Q_INVOKABLE void toggleRecipeStarred(const QString &recipeId);
+    void applyRemoteStarredRecipes(const QSet<QString> &remoteStarred);
     QSet<QString> starredRecipeIds() const { return m_starredRecipeIds; }
 
     // Pantry persistence
     QMap<QString, bool> loadPantryMap() const;
     void savePantryMap(const QMap<QString, bool> &map);
+
+    // Persistent Offline Delta Queue (LWW CRDT)
+    QMap<QString, TimedDeltaEntry> loadPendingPantryDelta() const;
+    void savePendingPantryDelta(const QMap<QString, TimedDeltaEntry> &delta);
+    QMap<QString, TimedDeltaEntry> loadPendingStarredDelta() const;
+    void savePendingStarredDelta(const QMap<QString, TimedDeltaEntry> &delta);
+    QPair<QString, qint64> loadPendingStoreDelta() const;
+    void savePendingStoreDelta(const QString &storeId, qint64 timestampMs);
 
     // Sync settings
     QString syncUrl() const { return m_syncUrl; }
@@ -82,16 +101,28 @@ public:
     bool autoSync() const { return m_autoSync; }
     void setAutoSync(bool enabled);
 
+    // Store & Catalog settings
+    QString activeStoreId() const { return m_activeStoreId; }
+    void setActiveStoreId(const QString &storeId);
+    void applyRemoteActiveStoreId(const QString &storeId);
+
+    QString recipesUrl() const { return m_recipesUrl; }
+    void setRecipesUrl(const QString &url);
+
     // Factory reset
     Q_INVOKABLE void clearAllUserData();
 
 signals:
     void timeSlotsChanged();
     void starredChanged(const QString &recipeId, bool starred);
+    void starredRecipeEdited(const QString &recipeId, bool starred);
     void syncUrlChanged();
     void syncRoomIdChanged();
     void syncTokenChanged();
     void autoSyncChanged();
+    void activeStoreIdChanged();
+    void activeStoreEdited(const QString &storeId);
+    void recipesUrlChanged();
     void userDataReset();
 
 private:
@@ -105,5 +136,7 @@ private:
     QString m_syncUrl;
     QString m_syncRoomId;
     QString m_syncToken;
-    bool m_autoSync{false};
+    bool m_autoSync{true};
+    QString m_activeStoreId;
+    QString m_recipesUrl;
 };
