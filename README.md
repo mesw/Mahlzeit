@@ -151,5 +151,5 @@ Mahlzeit/
 
 ## 📄 Lizenz & Datenschutz
 
-Dieses Projekt steht unter der MIT-Lizenz.
-Die Nutzung ist garantiert frei von Datenerfassung, Werbung und Cookies.
+Dieses Projekt steht unter der GPL3 Lizenz.
+Die Nutzung ist frei von Datenerfassung, Werbung und Cookies.
